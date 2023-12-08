@@ -10,5 +10,4 @@ export interface ProjectInfo {
     projectType: PortableTextBlock[],
     projectVideo: boolean,
     videoURL: URL,
-     projectImages: Array<ImageProp>,
 }

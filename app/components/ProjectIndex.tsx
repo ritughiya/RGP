@@ -4,7 +4,6 @@
 import React from "react";
 import ProjectInfo from "@/types/interfaces";
 import { PortableText } from "@portabletext/react";
-import ImageInfo from "@/types/interfaces";
 import Image from "next/image";
 import {urlFor} from "@/sanity/sanity.client";
 import Link from 'next/link';

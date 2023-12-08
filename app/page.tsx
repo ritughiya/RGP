@@ -8,7 +8,6 @@ import { PortableText } from "@portabletext/react";
 import {SelectedProjects} from "./components/SelectedProjects";
 import {ProjectOverview} from "./components/ProjectOverview";
 import {ProjectIndex} from "./components/ProjectIndex";
-import {Fullpage} from "./components/Fullpage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
