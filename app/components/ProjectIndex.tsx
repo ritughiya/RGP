@@ -2,7 +2,7 @@
 
 
 import React from "react";
-import ProjectInfo from "@/types/interfaces";
+import { ProjectInfo } from "@/types/interfaces";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import {urlFor} from "@/sanity/sanity.client";
