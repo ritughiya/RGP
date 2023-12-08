@@ -28,7 +28,7 @@ export interface ProjectInfo {
     projectTitle: string,
     projectClients: PortableTextBlock[],
     projectVideoposter: HTMLImageElement,
-    projectVideoURL: URL,
+    projectVideoURL: string,
     videomodal1: PortableTextBlock[],
     videomodal2: string,
     projectImages: Array<ImageProps>,

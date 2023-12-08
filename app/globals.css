@@ -35,13 +35,6 @@ body {
   background-color: rgb(var(--background-color));
 }
 
-/* 
-.proj, .projtxt{
-  margin: 0 auto;
-} */
-
-.Project-Info{
-}
 
 span.cola {
   width: 30%;
@@ -59,9 +52,6 @@ span.cold {
   width: 8%;
 }
 
-/* img, video{
-  height:45vh;
-} */
 
 .outer-container {
     width: auto;

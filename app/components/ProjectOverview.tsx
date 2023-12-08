@@ -49,7 +49,6 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
     const components = {
       marks: {
         link: ({value, children}) => {
-          // Read https://css-tricks.com/use-target_blank/
           const { blank, href } = value
           return blank ?
             <a href={href} target="_blank" rel="noopener">{children}</a>
