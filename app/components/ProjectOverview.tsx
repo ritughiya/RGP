@@ -48,8 +48,10 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
     };
 
     const components = {
-      marks: {
-        link: ({value, children}) => {
+      marks: { 
+      
+
+        link: ({value,children} : {value:any, children:any}) => {
           const { blank, href } = value
           return blank ?
             <a href={href} target="_blank" rel="noopener">{children}</a>
