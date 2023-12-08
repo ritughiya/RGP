@@ -33,7 +33,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                 </>
 }
 
-const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectDescription, projectServices, projectVideo, projectVideoposter, projectVideoURL, videoURL, projectImages, projectTheme, videomodal1, videomodal2  }) => {
+const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectVideoposter, projectVideoURL,  projectImages, projectTheme, videomodal1, videomodal2  }) => {
 
   const [copySuccess, setCopySuccess] = useState('');
   
