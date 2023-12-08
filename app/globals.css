@@ -34,7 +34,8 @@ body {
   color: rgb(var(--text-color));
   background-color: rgb(var(--background-color));
 }
-
+.Project-Info{
+}
 
 span.cola {
   width: 30%;
@@ -51,7 +52,6 @@ span.colc {
 span.cold {
   width: 8%;
 }
-
 
 .outer-container {
     width: auto;
@@ -72,9 +72,9 @@ video {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.reelvideo {
-  width: auto;
-  height: 30vh;
+.reelvideo{
+  width: 100%;
+  height: auto;
 }
 
 .homedesc p{
@@ -88,4 +88,26 @@ height:min-content;
 .react-draggable,
 .react-draggable-dragged{
   z-index:100;
+}
+
+@media (max-width: 1000px) {
+
+  img{
+    height:auto !important;
+  }
+
+  .outer-container{
+    height:auto;
+  }
+
+  video {
+    width: auto;
+    height: auto;
+}
+
+  .reelvideo {
+    width: 100%;
+    height: auto;
+    margin-top:20px;
+}
 }

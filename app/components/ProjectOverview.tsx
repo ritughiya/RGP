@@ -22,6 +22,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                                     projectTitle={item.projectTitle}
                                     projectLink={item.projectLink}
                                     projectClients={item.projectClients}
+                                    projectDescription={item.projectDescription}
                                     projectVideoposter={item.projectVideoposter}
                                     projectVideoURL={item.projectVideoURL}
                                     videomodal1={item.videomodal1}
@@ -33,7 +34,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                 </>
 }
 
-const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectVideoposter, projectVideoURL,  projectImages, projectTheme, videomodal1, videomodal2  }) => {
+const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectDescription, projectVideoposter, projectVideoURL,  projectImages, projectTheme, videomodal1, videomodal2  }) => {
 
   const [copySuccess, setCopySuccess] = useState('');
   
@@ -48,7 +49,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
     const components = {
       marks: {
-        link: ({value}:any, {children}:any) => {
+        link: ({value, children}) => {
           const { blank, href } = value
           return blank ?
             <a href={href} target="_blank" rel="noopener">{children}</a>
@@ -83,7 +84,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-      <video preload="none"  loop autoPlay muted className="mx-sm" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+      <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
 </video>
 
@@ -117,7 +118,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                 <div key={index} >
                   <Image
                       alt="Image of project."
-                      className="proj mx-sm"
+                      className="proj "
                       src={urlFor(projectImage && projectImage).url()}
                       width={0}
                       height={0}
@@ -144,6 +145,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                         <div className="text-left projtxt grid grid-cols-12 mt-sm">
                     <div className="col-start-5 col-end-12 ">
                     {projectClients && <PortableText value={projectClients} />}
+                    {projectDescription && <PortableText value={projectDescription} />}
                     </div>
                     </div>
                     </div>
@@ -174,7 +176,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-      <video preload="none"  loop autoPlay muted className="mx-sm" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+      <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
 </video>
 
@@ -208,7 +210,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                 <div key={index} >
                   <Image
                       alt="Image of project."
-                      className="proj mx-sm"
+                      className="proj"
                       src={urlFor(projectImage && projectImage).url()}
                       width={0}
                       height={0}
@@ -235,6 +237,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                         <div className="text-left projtxt grid grid-cols-12 mt-sm">
                     <div className="col-start-5 col-end-12 ">
                     {projectClients && <PortableText value={projectClients} />}
+                    {projectDescription && <PortableText value={projectDescription} />}
                     </div>
                     </div>
                     </div>

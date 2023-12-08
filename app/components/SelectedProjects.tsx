@@ -43,19 +43,19 @@ const SelectedProjectItem: React.FC<SelectInfo> = ({projectTitle, projectClients
                     <span className="col-start-1 col-end-5">
                         {projectClients && <PortableText value={projectClients} />}
                     </span>
-                    <span className="col-start-5 col-end-9">
+                    <span className="col-start-5 col-end-12 lg:col-end-10">
                     { projectLink && <Link className=" border-b border-b-black border-opacity-30 cursor-pointer" href={url}>
                     {projectTitle && projectTitle}
                     </Link> }
                     {!projectLink && projectTitle}
                     </span>
-                    <span className=" col-start-10 col-end-10">
+                    <span className=" col-start-10 col-end-10 hidden lg:block lg:col-start-10 lg:col-end-10 ">
                     {projectType && <PortableText value={projectType} />}
                     </span>
-                    <span className=" col-start-11 col-end-11 ">
+                    <span className=" col-start-12 col-end-12 lg:col-start-11 lg:col-end-11 ">
                     {projectYear && <PortableText value={projectYear} />}
                     </span>
-                    <span className=" col-start-12 col-end-12 ">
+                    <span className="lg:col-start-12 lg:col-end-12 col-start-12 col-end-12 hidden lg:block">
                     {Collaboration && <PortableText value={Collaboration} />}
                     </span>
                     </div>

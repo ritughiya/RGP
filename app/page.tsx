@@ -24,11 +24,9 @@ export default async function Home() {
        {project.map((data) => (
             <div key={data._id} className=" pl-sm pr-sm font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} reel={data.homeReelURL} reelposter={data.homeReelposter} />
-              <div  className="mb-xl ">
-                <div className="border-t border-b">
+                <div className="border-t border-b mb-xxl">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
-              </div>
               </div>
               <div className="">
               <ProjectOverview projectinfos={data.featprojects}/>

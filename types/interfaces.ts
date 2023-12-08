@@ -27,10 +27,11 @@ export interface ProjectInfo {
     projectLink: string,
     projectTitle: string,
     projectClients: PortableTextBlock[],
+    projectDescription: PortableTextBlock[],
     projectVideoposter: HTMLImageElement,
     projectVideoURL: string,
     videomodal1: PortableTextBlock[],
     videomodal2: string,
     projectImages: Array<ImageProps>,
-    projectTheme: string
+    projectTheme: string,
 }

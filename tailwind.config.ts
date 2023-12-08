@@ -7,6 +7,10 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens:{
+      'md': '900px',
+      'lg': '1000px',
+    },
     backgroundColor: ({ theme }) => ({
             ...theme('colors'),
       'primary': '#151515',
