@@ -1,0 +1,262 @@
+'use client';
+
+import React, { useState } from 'react';
+import ProjectInfo from "@/types/interfaces";
+import { PortableText } from "@portabletext/react";
+import ImageInfo from "@/types/interfaces";
+import Image from "next/image";
+import {urlFor} from "@/sanity/sanity.client";
+import ReactFullpage from '@fullpage/react-fullpage';
+
+
+interface ProjectProps {
+    projectinfos: ProjectInfo[];
+}
+
+
+
+
+export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectProps) => {
+
+    return <>
+                {projectinfos && projectinfos.map((item, index) => (
+                         <ProjectItem index={index}
+                                    projectTitle={item.projectTitle}
+                                    projectLink={item.projectLink}
+                                    projectClients={item.projectClients}
+                                    projectDescription={item.projectDescription}
+                                    projectServices={item.projectServices}
+                                    projectVideo={item.projectVideo}
+                                    projectVideoposter={item.projectVideoposter}
+                                    projectVideoURL={item.projectVideoURL}
+                                    videoURL={item.videoURL}
+                                    videomodal1={item.videomodal1}
+                                    videomodal2={item.videomodal2}
+                                    projectImages={item.projectImages}
+                                    projectTheme={item.projectTheme}
+                                   >
+                </ProjectItem>
+                ))} 
+                </>
+}
+
+const ProjectItem: React.FC<ProjectInfo> = ({index, projectTitle, projectLink, projectClients, projectDescription, projectServices, projectVideo, projectVideoposter, projectVideoURL, videoURL, projectImages, projectTheme, videomodal1, videomodal2  }) => {
+
+  const [copySuccess, setCopySuccess] = useState('');
+  
+    const copyToClipBoard = async copyMe => {
+      try {
+        await navigator.clipboard.writeText(copyMe);
+        setCopySuccess('Copied!');
+      } catch (err) {
+        setCopySuccess('Failed to copy!');
+      }
+    };
+
+    const components = {
+      marks: {
+        link: ({value, children}) => {
+          // Read https://css-tricks.com/use-target_blank/
+          const { blank, href } = value
+          return blank ?
+            <a href={href} target="_blank" rel="noopener">{children}</a>
+            : <a href={href}>{children}</a>
+        }
+      }
+    }
+
+    return <>
+
+{(() => {
+    if (projectTheme == "light") {
+      return (
+  <>
+    <div className="Project-Info py-lg" id={projectLink}>
+      <div className="flex flex-col">
+    {projectVideoURL && <div className="outer-container">
+      <div className="inner-container relative ">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      {videomodal1 && 
+      <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+        <PortableText value={videomodal1} components={components}/>
+       </button>
+       </div>}
+       {videomodal2 && 
+       <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+        Copy Link
+       </button>
+       </div>}
+
+      </div>
+
+      <video preload="none"  loop autoPlay muted className="mx-sm" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+  <source src={projectVideoURL} type="video/mp4" />
+</video>
+
+      </div>
+    
+   
+
+</div>
+
+}
+
+{projectImages && <div className="outer-container">
+      <div className="inner-container relative ">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      {videomodal1 && 
+      <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+        <PortableText value={videomodal1} components={components}/>
+       </button>
+       </div>}
+       {videomodal2 && 
+       <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+        Copy Link
+       </button>
+       </div>}
+
+      </div>
+
+      { projectImages.map((projectImage, index) => (
+                <div key={index} >
+                  <Image
+                      alt="Image of project."
+                      className="proj mx-sm"
+                      src={urlFor(projectImage && projectImage).url()}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ top: '0', left: '0', maxWidth: '100%', maxHeight: '100%', width: 'auto', height: '40vh', objectFit: 'contain' }} // optional
+                    /> 
+    </div>
+))} 
+
+      </div>
+    
+   
+
+</div>
+
+}
+
+
+
+</div>
+
+
+
+                        <div className="text-left projtxt grid grid-cols-12 mt-sm">
+                    <div className="col-start-5 col-end-12 ">
+                    {projectClients && <PortableText value={projectClients} />}
+                    </div>
+                    </div>
+                    </div>
+
+  </>
+      );
+    } else {
+      return (
+        <>
+
+<div className="Project-Info py-lg" id={projectLink}>
+      <div className="flex flex-col">
+    {projectVideoURL && <div className="outer-container">
+      <div className="inner-container relative ">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      {videomodal1 && 
+      <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+        <PortableText value={videomodal1} components={components}/>
+       </button>
+       </div>}
+       {videomodal2 && 
+       <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+        Copy Link
+       </button>
+       </div>}
+
+      </div>
+
+      <video preload="none"  loop autoPlay muted className="mx-sm" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+  <source src={projectVideoURL} type="video/mp4" />
+</video>
+
+      </div>
+    
+   
+
+</div>
+
+}
+
+{projectImages && <div className="outer-container">
+      <div className="inner-container relative ">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      {videomodal1 && 
+      <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+        <PortableText value={videomodal1} components={components}/>
+       </button>
+       </div>}
+       {videomodal2 && 
+       <div>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+        Copy Link
+       </button>
+       </div>}
+
+      </div>
+
+      { projectImages.map((projectImage, index) => (
+                <div key={index} >
+                  <Image
+                      alt="Image of project."
+                      className="proj mx-sm"
+                      src={urlFor(projectImage && projectImage).url()}
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ top: '0', left: '0', maxWidth: '100%', maxHeight: '100%', width: 'auto', height: '40vh', objectFit: 'contain' }} // optional
+                    /> 
+    </div>
+))} 
+
+      </div>
+    
+   
+
+</div>
+
+}
+
+
+
+</div>
+
+
+
+                        <div className="text-left projtxt grid grid-cols-12 mt-sm">
+                    <div className="col-start-5 col-end-12 ">
+                    {projectClients && <PortableText value={projectClients} />}
+                    </div>
+                    </div>
+                    </div>
+                               
+                                </>
+
+      );
+    }
+  })()}
+
+
+
+                        </>
+
+}
+
+

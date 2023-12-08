@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: PTMono;
+  src: url(PTMono.ttf);
+}
+
+@font-face {
+  font-family: HelveticaNeueLTPro-Cn;
+  src: url(HelveticaNeueLTPro-LtCn.otf);
+}
+
+::selection {
+  background: #ededed; /* WebKit/Blink Browsers */
+   color: rgb(85, 80, 80);
+}
+::-moz-selection {
+  background: #ededed; /* Gecko Browsers */
+  color: rgb(85, 80, 80);
+}
+
+:root {
+  --text-color: 0, 0, 0;
+  --background-color: 255, 255, 255;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--text-color));
+  background-color: rgb(var(--background-color));
+}
+
+/* 
+.proj, .projtxt{
+  margin: 0 auto;
+} */
+
+.Project-Info{
+}
+
+span.cola {
+  width: 30%;
+}
+
+span.colb {
+  width: 35%;
+}
+
+span.colc {
+  width: 25%;
+}
+
+span.cold {
+  width: 8%;
+}
+
+/* img, video{
+  height:45vh;
+} */
+
+.outer-container {
+    width: auto;
+    height: 40vh;
+    text-align: center;
+}
+.inner-container {
+    display: inline-block;
+}
+.video-overlay {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+video {
+    width: auto;
+    height: 40vh;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.reelvideo {
+  width: auto;
+  height: 30vh;
+}
+
+.homedesc p{
+  margin-bottom:12px !important;
+}
+
+.homedesc{
+height:min-content;
+}
+
+.react-draggable,
+.react-draggable-dragged{
+  z-index:100;
+}
