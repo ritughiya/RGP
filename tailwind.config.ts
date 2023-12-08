@@ -7,8 +7,8 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    backgroundColor: theme => ({
-      ...theme('colors'),
+    backgroundColor: ({ theme }) => ({
+            ...theme('colors'),
       'primary': '#151515',
      }),
     fontFamily: {
