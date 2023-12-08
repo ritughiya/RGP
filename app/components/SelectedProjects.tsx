@@ -29,8 +29,8 @@ export const SelectedProjects: React.FC<ProjectProps> = ({projectinfos}: Project
                                     projectType={item.projectType}
                                     projectLink={item.projectLink}
                                     projectTheme={item.projectTheme}
-                                   >
-                </SelectedProjectItem>
+                                   
+                />
             ))} 
     </>
 }

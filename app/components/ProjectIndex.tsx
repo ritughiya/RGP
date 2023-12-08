@@ -27,8 +27,8 @@ export const ProjectIndex: React.FC<ProjectProps> = ({projectinfos}: ProjectProp
                                     projectYear={item.projectYear}
                                     Collaboration={item.Collaboration}
                                     projectType={item.projectType}
-                                   >
-                </ProjectIndexItem>
+                                   
+                />
             ))} 
             </>
 }

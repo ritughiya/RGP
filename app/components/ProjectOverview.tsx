@@ -33,8 +33,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                                     videomodal2={item.videomodal2}
                                     projectImages={item.projectImages}
                                     projectTheme={item.projectTheme}
-                                   >
-                </ProjectItem>
+                />
                 ))} 
                 </>
 }
