@@ -20,7 +20,7 @@ export const SelectedProjects: React.FC<ProjectProps> = ({projectinfos}: Project
 
     return <>
             {projectinfos && projectinfos.map((item, index) => (
-                         <SelectedProjectItem index={index}
+                         <SelectedProjectItem key={index}
                                     projectTitle={item.projectTitle}
                                     projectClients={item.projectClients}
                                     projectServicesList={item.projectServicesList}

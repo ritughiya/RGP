@@ -6,7 +6,6 @@ import { PortableText } from "@portabletext/react";
 import ImageInfo from "@/types/interfaces";
 import Image from "next/image";
 import {urlFor} from "@/sanity/sanity.client";
-import ReactFullpage from '@fullpage/react-fullpage';
 
 
 interface ProjectProps {
@@ -20,7 +19,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
 
     return <>
                 {projectinfos && projectinfos.map((item, index) => (
-                         <ProjectItem index={index}
+                         <ProjectItem key={index}
                                     projectTitle={item.projectTitle}
                                     projectLink={item.projectLink}
                                     projectClients={item.projectClients}
