@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import ProjectInfo from "@/types/interfaces";
+import { ProjectInfo } from "@/types/interfaces";
 import { PortableText } from "@portabletext/react";
-import ImageInfo from "@/types/interfaces";
 import Image from "next/image";
 import {urlFor} from "@/sanity/sanity.client";
 
@@ -23,12 +22,8 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                                     projectTitle={item.projectTitle}
                                     projectLink={item.projectLink}
                                     projectClients={item.projectClients}
-                                    projectDescription={item.projectDescription}
-                                    projectServices={item.projectServices}
-                                    projectVideo={item.projectVideo}
                                     projectVideoposter={item.projectVideoposter}
                                     projectVideoURL={item.projectVideoURL}
-                                    videoURL={item.videoURL}
                                     videomodal1={item.videomodal1}
                                     videomodal2={item.videomodal2}
                                     projectImages={item.projectImages}
@@ -38,11 +33,11 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                 </>
 }
 
-const ProjectItem: React.FC<ProjectInfo> = ({index, projectTitle, projectLink, projectClients, projectDescription, projectServices, projectVideo, projectVideoposter, projectVideoURL, videoURL, projectImages, projectTheme, videomodal1, videomodal2  }) => {
+const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectDescription, projectServices, projectVideo, projectVideoposter, projectVideoURL, videoURL, projectImages, projectTheme, videomodal1, videomodal2  }) => {
 
   const [copySuccess, setCopySuccess] = useState('');
   
-    const copyToClipBoard = async copyMe => {
+    const copyToClipBoard = async (copyMe : any) => {
       try {
         await navigator.clipboard.writeText(copyMe);
         setCopySuccess('Copied!');

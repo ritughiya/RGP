@@ -1,6 +1,8 @@
 // types/index.ts
 
 import { PortableTextBlock } from "sanity";
+import { IndexInfo } from "./interfaces";
+import { SelectInfo } from "./interfaces";
 import { ProjectInfo } from "./interfaces";
 
 
@@ -9,10 +11,11 @@ export type ProjectType = {
   homeTitle: string,
   homeDesc: string,
   homeReel: File,
+  homeReelURL: URL,
   homeReelposter: HTMLImageElement,
-  selectedProjects: ProjectInfo[],
+  selectedProjects: SelectInfo[],
   featprojects: ProjectInfo[],
-  indexProjects: ProjectInfo[],
+  indexProjects: IndexInfo[],
 };
 
 export type ProfileType = {

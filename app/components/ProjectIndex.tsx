@@ -2,7 +2,7 @@
 
 
 import React from "react";
-import { ProjectInfo } from "@/types/interfaces";
+import { IndexInfo } from "@/types/interfaces";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import {urlFor} from "@/sanity/sanity.client";
@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 
 interface ProjectProps {
-    projectinfos: ProjectInfo[];
+    projectinfos: IndexInfo[];
 }
 
 
@@ -33,7 +33,7 @@ export const ProjectIndex: React.FC<ProjectProps> = ({projectinfos}: ProjectProp
             </>
 }
 
-const ProjectIndexItem: React.FC<ProjectInfo> = ({projectTitle, projectLink, projectClients, projectServicesList, projectType, projectYear, Collaboration }) => {
+const ProjectIndexItem: React.FC<IndexInfo> = ({projectTitle, projectLink, projectClients, projectServicesList, projectType, projectYear, Collaboration }) => {
 
     var url = `#${projectLink}`
 

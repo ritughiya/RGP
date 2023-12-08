@@ -1,16 +1,36 @@
+import { ImageProps } from "next/image";
 import { PortableTextBlock } from "sanity";
 
-export interface ProjectInfo {
-    id: number,
+export interface IndexInfo {
     projectLink: string,
     projectTitle: string,
     projectClients: PortableTextBlock[],
-    projectDescription: PortableTextBlock[],
-    projectServices: PortableTextBlock[],
     projectServicesList: PortableTextBlock[],
-    projectYear: string,
-    Collaboration: string,
+    projectYear: PortableTextBlock[],
+    Collaboration: PortableTextBlock[],
     projectType: PortableTextBlock[],
-    projectVideo: boolean,
-    videoURL: URL,
+}
+
+export interface SelectInfo {
+    projectLink: string,
+    projectTitle: string,
+    projectClients: PortableTextBlock[],
+    projectServicesList: PortableTextBlock[],
+    projectYear: PortableTextBlock[],
+    Collaboration: PortableTextBlock[],
+    projectType: PortableTextBlock[],
+    projectTheme: string
+}
+
+
+export interface ProjectInfo {
+    projectLink: string,
+    projectTitle: string,
+    projectClients: PortableTextBlock[],
+    projectVideoposter: HTMLImageElement,
+    projectVideoURL: URL,
+    videomodal1: PortableTextBlock[],
+    videomodal2: string,
+    projectImages: Array<ImageProps>,
+    projectTheme: string
 }
