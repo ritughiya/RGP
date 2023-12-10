@@ -14,7 +14,7 @@ export default function Navbar(props : any) {
      <div className="fixed bg-white pt-xs pb-xs top-0 z-20 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full ">
       <div className="grid grid-cols-12 px-sm">
               <span className="col-span-2 col-start-1	col-end-4	">
-              <Link className="cursor-pointer "  href="#home">{props.title}</Link></span>
+              <Link className="cursor-pointer "  href="#index">{props.title}</Link></span>
               <span className="col-start-5 col-end-7">
               <Link className="cursor-pointer border-b border-b-black border-opacity-30 hidden lg:inline-block " href="#index">Index</Link>
                 </span>
