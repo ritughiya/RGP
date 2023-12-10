@@ -7,6 +7,14 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import {urlFor} from "@/sanity/sanity.client";
 import Link from 'next/link';
+import { Scrollchor, AnimateConfig, linear } from 'react-scrollchor';
+
+
+const defaultAnimate: AnimateConfig = {
+  offset: 0,
+  duration: 400,
+  easing: linear,
+};
 
 
 
@@ -44,9 +52,9 @@ const SelectedProjectItem: React.FC<SelectInfo> = ({projectTitle, projectClients
                         {projectClients && <PortableText value={projectClients} />}
                     </span>
                     <span className="col-start-5 col-end-12 lg:col-end-10">
-                    { projectLink && <Link className=" border-b border-b-black border-opacity-30 cursor-pointer" href={url}>
+                    { projectLink && <Scrollchor className=" border-b border-b-black border-opacity-30 cursor-pointer" to={url}>
                     {projectTitle && projectTitle}
-                    </Link> }
+                    </Scrollchor> }
                     {!projectLink && projectTitle}
                     </span>
                     <span className=" col-start-10 col-end-10 hidden lg:block lg:col-start-10 lg:col-end-10 ">
