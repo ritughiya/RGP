@@ -30,7 +30,7 @@ export default async function Home() {
               <div className="">
               <ProjectOverview projectinfos={data.featprojects}/>
               </div>
-              <div id="index" className="border-b pt-xxl mb-lg pb-xs hidden lg:block">
+              <div id="full" className="border-b pt-xxl mb-lg pb-xs hidden lg:block">
                 <div className="border-t">
               <ProjectIndex projectinfos={data.indexProjects}/>
               </div>

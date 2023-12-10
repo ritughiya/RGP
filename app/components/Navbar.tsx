@@ -16,7 +16,7 @@ export default function Navbar(props : any) {
               <span className="col-span-2 col-start-1	col-end-4	">
               <Link className="cursor-pointer "  href="#home">{props.title}</Link></span>
               <span className="col-start-5 col-end-7 hidden lg:inline-block ">
-              <Link className="cursor-pointer border-b border-b-black border-opacity-30 " href="#index">Index</Link>
+              <Link className="cursor-pointer border-b border-b-black border-opacity-30 " href="#full">Index</Link>
                 </span>
               <span className="col-span-1 col-start-10 lg:col-start-12">
                 <Link className="cursor-pointer " href="#index">
