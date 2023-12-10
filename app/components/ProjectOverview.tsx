@@ -122,7 +122,6 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       { projectImages.map((projectImage, index) => (
                 <div key={index} >
                   <Image
-                   loading="lazy"
                       alt="Image of project."
                       className="proj "
                       src={urlFor(projectImage && projectImage).url()}
@@ -218,7 +217,6 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       { projectImages.map((projectImage, index) => (
                 <div key={index} >
                   <Image
-                   loading="lazy"
                       alt="Image of project."
                       className="proj"
                       src={urlFor(projectImage && projectImage).url()}
