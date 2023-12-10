@@ -10,7 +10,7 @@ import {ProjectOverview} from "./components/ProjectOverview";
 import {ProjectIndex} from "./components/ProjectIndex";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Scrollchor, AnimateConfig, easeOutQuad } from 'react-scrollchor';
+import { Scrollchor, AnimateConfig, linear } from 'react-scrollchor';
 
 import Link from 'next/link';
 
