@@ -86,7 +86,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-{projectVideoURL && <img src={projectVideoURL} />
+{projectVideoURL && <img loading="lazy" src={projectVideoURL} />
 } 
 
 {/* <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
@@ -122,6 +122,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       { projectImages.map((projectImage, index) => (
                 <div key={index} >
                   <Image
+                   loading="lazy"
                       alt="Image of project."
                       className="proj "
                       src={urlFor(projectImage && projectImage).url()}
@@ -181,7 +182,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-      {projectVideoURL && <img src={projectVideoURL} />
+      {projectVideoURL && <img loading="lazy" src={projectVideoURL} />
 } 
 
       {/* <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
@@ -217,6 +218,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       { projectImages.map((projectImage, index) => (
                 <div key={index} >
                   <Image
+                   loading="lazy"
                       alt="Image of project."
                       className="proj"
                       src={urlFor(projectImage && projectImage).url()}
