@@ -6,8 +6,14 @@ import Logo from "../../icons/logo.png";
 import { PortableText } from "@portabletext/react";
 import {urlFor} from "@/sanity/sanity.client";
 import Draggable from 'react-draggable'; 
-import { Scrollchor } from 'react-scrollchor';
+import { Scrollchor, AnimateConfig, easeOutQuad } from 'react-scrollchor';
 
+
+const defaultAnimate: AnimateConfig = {
+  offset: 0,
+  duration: 400,
+  easing: easeOutQuad,
+};
 
 export default function Navbar(props : any) {
   return (
