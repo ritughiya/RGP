@@ -26,17 +26,17 @@ export default function Navbar(props : any) {
               </div>
               </div>
 
-              <div   id="home" className="pt-xxl mb-xxl lg:mb-xxxll text-opacity-80 grid grid-cols-12 font-sans text-smm tracking-[0.9px] w-full z-40">
+              <div   id="home" className="pt-xxl lg:mb-xxxll text-opacity-80 grid grid-cols-12 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
                 <div className="col-start-1 lg:col-start-5 lg:col-end-9 col-end-13 homedesc pt-sm">
                 {props.desc && <PortableText value={props.desc} />}
                                   </div>
                                   
-                   <div className="col-start-1 col-end-8 lg:col-start-11 lg:col-end-13 ">
+                   <div className="col-start-1 col-end-10 lg:col-start-11 lg:col-end-13 ">
                     
                    {props.reel && 
                     <Draggable bounds={{top: -35}}> 
                    <div className="z-100 cursor-move hidden lg:absolute lg:block">
-                         <video preload="none"  loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
+                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
@@ -45,7 +45,7 @@ export default function Navbar(props : any) {
 
             {props.reel && 
                    <div className="z-100 cursor-move block lg:hidden">
-                         <video preload="none"  loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
+                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     

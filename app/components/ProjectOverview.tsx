@@ -66,7 +66,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
     if (projectTheme == "light") {
       return (
   <>
-    <div className="Project-Info py-lg" id={projectLink}>
+    <div className="Project-Info py-xxl" id={projectLink}>
       <div className="flex flex-col">
     {projectVideoURL && <div className="outer-container">
       <div className="inner-container inner-container-gif  relative ">
@@ -161,7 +161,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       return (
         <>
 
-<div className="Project-Info py-lg" id={projectLink}>
+<div className="Project-Info py-xxl" id={projectLink}>
       <div className="flex flex-col">
     {projectVideoURL && <div className="outer-container">
       <div className="inner-container inner-container-gif relative ">
