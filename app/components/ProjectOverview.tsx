@@ -70,7 +70,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       <div className="flex flex-col">
     {projectVideoURL && <div className="outer-container">
       <div className="inner-container inner-container-gif  relative ">
-      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
       <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
@@ -103,7 +103,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 {projectImages && <div className="outer-container">
       <div className="inner-container relative ">
-      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
       <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
@@ -165,7 +165,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       <div className="flex flex-col">
     {projectVideoURL && <div className="outer-container">
       <div className="inner-container inner-container-gif relative ">
-      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
       <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
@@ -198,7 +198,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 {projectImages && <div className="outer-container">
       <div className="inner-container relative ">
-      <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
+      <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
       <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
