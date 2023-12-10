@@ -31,7 +31,7 @@ export default function Navbar(props : any) {
                 {props.desc && <PortableText value={props.desc} />}
                                   </div>
                                   
-                   <div className="col-start-1 col-end-6 lg:col-start-11 lg:col-end-13 ">
+                   <div className="col-start-1 col-end-8 lg:col-start-11 lg:col-end-13 ">
                     
                    {props.reel && 
                     <Draggable bounds={{top: -35}}> 
