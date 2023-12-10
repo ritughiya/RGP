@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 
 import Link from 'next/link';
 
+export const revalidate = 60; // revalidate this page every 60 seconds
 
 
 export default async function Home() {
@@ -44,4 +45,3 @@ export default async function Home() {
   );
 } 
 
-export const revalidate = 60; // revalidate this page every 60 seconds
