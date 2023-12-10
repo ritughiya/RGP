@@ -69,7 +69,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
     <div className="Project-Info py-lg" id={projectLink}>
       <div className="flex flex-col">
     {projectVideoURL && <div className="outer-container">
-      <div className="inner-container relative ">
+      <div className="inner-container inner-container-gif  relative ">
       <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
@@ -86,9 +86,12 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-      <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+{projectVideoURL && <img src={projectVideoURL} />
+} 
+
+{/* <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
-</video>
+</video> */}
 
       </div>
     
@@ -145,7 +148,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 
                         <div className="text-left projtxt grid grid-cols-12 mt-sm">
-                    <div className="col-start-5 col-end-12 ">
+                    <div className="lg:col-start-5 col-start-1 col-end-12 ">
                     {projectClients && <PortableText value={projectClients} />}
                     {projectDescription && <PortableText value={projectDescription} />}
                     </div>
@@ -161,7 +164,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 <div className="Project-Info py-lg" id={projectLink}>
       <div className="flex flex-col">
     {projectVideoURL && <div className="outer-container">
-      <div className="inner-container relative ">
+      <div className="inner-container inner-container-gif relative ">
       <div className="transition ease-in-out delay-100  video-overlay absolute z-50 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
@@ -178,9 +181,12 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-      <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+      {projectVideoURL && <img src={projectVideoURL} />
+} 
+
+      {/* <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
-</video>
+</video> */}
 
       </div>
     
@@ -237,7 +243,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 
                         <div className="text-left projtxt grid grid-cols-12 mt-sm">
-                    <div className="col-start-5 col-end-12 ">
+                    <div className="lg:col-start-5 col-start-1 col-end-12 ">
                     {projectClients && <PortableText value={projectClients} />}
                     {projectDescription && <PortableText value={projectDescription} />}
                     </div>

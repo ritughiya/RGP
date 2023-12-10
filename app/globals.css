@@ -90,6 +90,11 @@ height:min-content;
   z-index:100;
 }
 
+.inner-container-gif img{
+  height:40vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 @media (max-width: 1000px) {
 
   img{
