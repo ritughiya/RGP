@@ -17,6 +17,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-draggable": "^4.4.6",
+    "react-scrollchor": "^7.0.2",
     "sanity": "^3.19.2",
     "sanity-plugin-media": "^2.2.4",
     "styled-components": "^6.1.1"

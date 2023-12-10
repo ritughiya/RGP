@@ -6,6 +6,7 @@ import Logo from "../../icons/logo.png";
 import { PortableText } from "@portabletext/react";
 import {urlFor} from "@/sanity/sanity.client";
 import Draggable from 'react-draggable'; 
+import { Scrollchor } from 'react-scrollchor';
 
 
 export default function Navbar(props : any) {
@@ -14,9 +15,9 @@ export default function Navbar(props : any) {
      <div className="fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full ">
       <div className="grid grid-cols-12 px-sm">
               <span className="col-start-1	col-end-3	">
-              <Link className="cursor-pointer "  href="#home">{props.title}</Link></span>
+              <Scrollchor className="cursor-pointer "  to="#home">{props.title}</Scrollchor></span>
               <span className="col-start-5 col-end-7 hidden lg:inline-block ">
-              <Link className="cursor-pointer border-b border-b-black border-opacity-30 " href="#full">Index</Link>
+              <Scrollchor className="cursor-pointer border-b border-b-black border-opacity-30 " to="#full">Index</Scrollchor>
                 </span>
               <span className="col-span-1 col-start-10 lg:col-start-12">
                 <Link className="cursor-pointer " href="#index">
