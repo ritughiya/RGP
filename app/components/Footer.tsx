@@ -14,9 +14,6 @@ export default function Footer(props : any) {
               <span className="text-center">
                 email - info@rgp.ltd
                 </span>
-              <span className="text-center">
-                ig - @rituqhiya
-              </span>
               </div>
 
                 </> 
