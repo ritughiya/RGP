@@ -55,6 +55,7 @@ const config: Config = {
       xl: '40px',
       xxl: '70px',
       xxxl: '95px',
+      xxxxxl: '125px',
       xxxll: '200px',
       xxxxl: '280px'
     },

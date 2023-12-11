@@ -10,9 +10,10 @@ import {ProjectOverview} from "./components/ProjectOverview";
 import {ProjectIndex} from "./components/ProjectIndex";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { Scrollchor, AnimateConfig, linear } from 'react-scrollchor';
 
 import Link from 'next/link';
+
+export const revalidate = 60; // revalidate this page every 60 seconds
 
 
 export default async function Home() {
@@ -24,7 +25,7 @@ export default async function Home() {
        {project.map((data) => (
             <div key={data._id} className=" pl-sm pr-sm font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} reel={data.homeReelURL} reelposter={data.homeReelposter} />
-                <div className="border-t border-b mb-xxl hidden lg:block">
+                <div className="border-t border-b mb-md hidden lg:block">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>

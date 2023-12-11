@@ -7,6 +7,9 @@ import { PortableText } from "@portabletext/react";
 import {urlFor} from "@/sanity/sanity.client";
 import Draggable from 'react-draggable'; 
 import { Scrollchor, AnimateConfig, linear } from 'react-scrollchor';
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+
+const url = "https://ltd.us17.list-manage.com/subscribe/post?u=12889e1a71932bff10ee0d733&amp;id=cb79513709&amp;f_id=00026ae0f0";
 
 
 const defaultAnimate: AnimateConfig = {
@@ -14,6 +17,24 @@ const defaultAnimate: AnimateConfig = {
   duration: 400,
   easing: linear,
 };
+
+const SimpleForm = () => <MailchimpSubscribe url={url}/>
+
+
+// use the render prop and your custom form
+const CustomForm = () => (
+  <MailchimpSubscribe
+    url={url}
+    render={({ subscribe, status, message }) => (
+      <div className="customform">
+        <SimpleForm onSubmitted={formData => subscribe(formData)} />
+        {status === "sending" && <div style={{ color: "#00000030", marginBottom: "10px"  }}>sending...</div>}
+        {status === "error" && <div style={{ color: "#00000030", marginBottom: "10px"  }} dangerouslySetInnerHTML={{__html: message}}/>}
+        {status === "success" && <div style={{ color: "#00000030", marginBottom: "10px" }}>Subscribed !</div>}
+      </div>
+    )}
+  />
+)
 
 export default function Navbar(props : any) {
   return (
@@ -26,16 +47,21 @@ export default function Navbar(props : any) {
               <Scrollchor className="cursor-pointer border-b border-b-black border-opacity-30 " to="#full">Index</Scrollchor>
                 </span>
               <span className="col-span-1 col-start-10 lg:col-start-12">
-                <Link className="cursor-pointer " href="#index">
-                  info@rpg.ltd
-                </Link>
+              <Link className="cursor-pointer" href="mailto:info@rgp.ltd?subject=Inquiry from Website">info@rpg.ltd</Link>
               </span>
               </div>
               </div>
 
-              <div   id="home" className="pt-xxl lg:mb-xxxll text-opacity-80 grid grid-cols-12 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
+              <div   id="home" className="pt-xl lg:mb-xxxxxl text-opacity-80 grid grid-cols-12 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
                 <div className="col-start-1 lg:col-start-5 lg:col-end-9 col-end-13 homedesc pt-sm">
                 {props.desc && <PortableText value={props.desc} />}
+
+                <div className="mt-md mb-sm">
+                Sign up for a full pdf :
+                </div>
+
+
+                <CustomForm/>
                                   </div>
                                   
                    <div className="col-start-1 col-end-10 lg:col-start-11 lg:col-end-13 ">
