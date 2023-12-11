@@ -4,7 +4,7 @@ type FormData = {
 }
 
 interface IProps {
-  url: string;
+  url?: string;
   render: (props: { subscribe: (formData: FormData) => void, status: Status, message: string }) => React.ReactNode;
 }
 
