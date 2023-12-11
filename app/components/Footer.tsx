@@ -9,13 +9,13 @@ export default function Footer(props : any) {
 <>
      <div className="text-opacity-80  mt-xxxxl mb-xxxl font-sans text-sm tracking-[0.9px] w-full flex flex-col justify-center">
      <span className="text-center">
-                <Link className="cursor-pointer " href="#index">Ritu Ghiya Projects</Link>
+                Ritu Ghiya Projects
               </span>
               <span className="text-center">
-                <Link className="cursor-pointer "  href="#profile">info@rgp.ltd</Link>
+                email - info@rgp.ltd
                 </span>
               <span className="text-center">
-                <Link className="cursor-pointer " href="#index">@rituqhiya</Link>
+                ig - @rituqhiya
               </span>
               </div>
 
