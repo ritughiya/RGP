@@ -95,7 +95,7 @@ height:min-content;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-input{
+.simple input{
   font-size: 13px;
     line-height: 18px;
     font-family: Arial, sans-serif;
@@ -112,11 +112,11 @@ input{
   margin-bottom: 8px;
 }
 
-input:focus{
+.simple input:focus{
   outline: none;
 }
 
-button{
+.simple button{
   font-size: 13px;
   line-height: 18px;
   font-family: Arial, sans-serif;
