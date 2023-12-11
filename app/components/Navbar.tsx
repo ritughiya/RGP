@@ -22,19 +22,19 @@ const SimpleForm = () => <MailchimpSubscribe url={url}/>
 
 
 // use the render prop and your custom form
-const CustomForm = () => (
-  <MailchimpSubscribe
-    url={url}
-    render={({ subscribe, status, message }) => (
-      <div className="customform">
-        <SimpleForm onSubmitted={formData => subscribe(formData)} />
-        {status === "sending" && <div style={{ color: "#00000030", marginBottom: "10px"  }}>sending...</div>}
-        {status === "error" && <div style={{ color: "#00000030", marginBottom: "10px"  }} dangerouslySetInnerHTML={{__html: message}}/>}
-        {status === "success" && <div style={{ color: "#00000030", marginBottom: "10px" }}>Subscribed !</div>}
-      </div>
-    )}
-  />
-)
+// const CustomForm = () => (
+//   <MailchimpSubscribe
+//     url={url}
+//     render={({ subscribe, status, message }) => (
+//       <div className="customform">
+//         <SimpleForm onSubmitted={formData => subscribe(formData)} />
+//         {status === "sending" && <div style={{ color: "#00000030", marginBottom: "10px"  }}>sending...</div>}
+//         {status === "error" && <div style={{ color: "#00000030", marginBottom: "10px"  }} dangerouslySetInnerHTML={{__html: message}}/>}
+//         {status === "success" && <div style={{ color: "#00000030", marginBottom: "10px" }}>Subscribed !</div>}
+//       </div>
+//     )}
+//   />
+// )
 
 export default function Navbar(props : any) {
   return (
@@ -60,8 +60,9 @@ export default function Navbar(props : any) {
                 Sign up for a full pdf :
                 </div>
 
-
-                <CustomForm/>
+                <div className="simple">
+                <SimpleForm/>
+                </div>
                                   </div>
                                   
                    <div className="col-start-1 col-end-10 lg:col-start-11 lg:col-end-13 ">

@@ -8,6 +8,12 @@ interface IProps {
   render?: (props: { subscribe: (formData: FormData) => void, status: Status, message: string }) => React.ReactNode;
 }
 
+// interface SubmittedInfo {
+//     formData: FormData,  
+// }
+
+
 declare module 'react-mailchimp-subscribe' {
   export default class MailchimpSubscribe extends React.Component<IProps> {};
+
 }
