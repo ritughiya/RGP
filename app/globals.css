@@ -60,6 +60,7 @@ span.cold {
 }
 .inner-container {
     display: inline-block;
+    background-color: #00000015;
 }
 .video-overlay {
     left: 50%;
