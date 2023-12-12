@@ -11,9 +11,10 @@ import {ProjectOverview} from "./components/ProjectOverview";
 import {ProjectIndex} from "./components/ProjectIndex";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import Link from 'next/link';
-
+import { revalidatePath } from 'next/cache'
+ 
+revalidatePath('/', 'layout')
 
 export default async function Home() {
   const project: ProjectType[] = await getProject();
