@@ -127,7 +127,7 @@ height:min-content;
   color: black !important;
 }
 
-button:hover{
+.simple button:hover{
   background-color: #00000010;
   color:white;
 }
