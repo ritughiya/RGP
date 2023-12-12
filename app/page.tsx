@@ -12,6 +12,7 @@ import {ProjectIndex} from "./components/ProjectIndex";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Link from 'next/link';
+import Script from 'next/script';
 
 export const revalidate = 60;
 
@@ -21,6 +22,21 @@ export default async function Home() {
 
 
   return (
+    <>
+        <Script id="analytics1"
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=G-4QLMD7K8DH`}
+      />
+  
+      <Script id="analytics2" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+  
+          gtag('config', 'G-4QLMD7K8DH');
+        `}
+      </Script>
     <div>
        {project.map((data) => (
             <div key={data._id} className=" pl-sm pr-sm font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
@@ -42,6 +58,7 @@ export default async function Home() {
             ))}
 <Footer />
     </div>
+    </>
   );
 } 
 
