@@ -13,6 +13,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Link from 'next/link';
 
+export const revalidate = 60;
+
 export default async function Home() {
   const project: ProjectType[] = await getProject();
   const profile: ProfileType[] = await getProfile();
