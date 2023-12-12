@@ -86,12 +86,12 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-{projectVideoURL && <img loading="lazy" src={projectVideoURL} />
-} 
+{/* {projectVideoURL && <img loading="lazy" height="40vh" width="auto" src={projectVideoURL} />
+}  */}
 
-{/* <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+{projectVideoURL &&  <video preload="none" playsInline loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
-</video> */}
+</video>  }
 
       </div>
     
@@ -181,12 +181,12 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
       </div>
 
-      {projectVideoURL && <img loading="lazy" src={projectVideoURL} />
-} 
+      {/* {projectVideoURL && <img height="40vh" width="auto" loading="lazy" src={projectVideoURL} />
+}  */}
 
-      {/* <video preload="none"  loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
+{projectVideoURL &&  <video preload="none" playsInline loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
-</video> */}
+</video>  }
 
       </div>
     
