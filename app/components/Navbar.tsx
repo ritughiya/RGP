@@ -65,7 +65,7 @@ export default function Navbar(props : any) {
                 </div>
                                   </div>
                                   
-                   <div className="col-start-1 col-end-10 lg:col-start-11 lg:col-end-13 ">
+                   <div className="col-start-1 col-end-9 lg:col-start-11 lg:col-end-13 ">
                     
                    {props.reel && 
                     <Draggable bounds={{top: -35}}> 
@@ -78,7 +78,7 @@ export default function Navbar(props : any) {
                   }
 
             {props.reel && 
-                   <div className="z-100 cursor-move block lg:hidden">
+                   <div className="z-100 block lg:hidden">
                          <video preload="none"  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
                     <source src={props.reel} type="video/mp4" />
                 </video> 

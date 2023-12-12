@@ -128,7 +128,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                       width={0}
                       height={0}
                       sizes="100vw"
-                      style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: 'auto', height: '40vh', objectFit: 'contain' }} // optional
+                      style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: '100%', height: '40vh', objectFit: 'contain' }} // optional
                     /> 
     </div>
 ))} 
@@ -223,7 +223,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                       width={0}
                       height={0}
                       sizes="100vw"
-                      style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: 'auto', height: '40vh', objectFit: 'contain' }} // optional
+                      style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: '100%', height: '40vh', objectFit: 'contain' }} // optional
                     /> 
     </div>
 ))} 
