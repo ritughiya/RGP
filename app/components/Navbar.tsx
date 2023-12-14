@@ -51,26 +51,12 @@ export default function Navbar(props : any) {
               </span>
               </div>
               </div>
-
-              <div   id="home" className="pt-xl lg:mb-xxxxxl text-opacity-80 grid grid-cols-12 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
-                <div className="col-start-1 lg:col-start-5 lg:col-end-9 col-end-13 homedesc pt-sm">
-                {props.desc && <PortableText value={props.desc} />}
-
-                <div className="mt-md mb-sm">
-                Sign up for a full pdf :
-                </div>
-
-                <div className="simple">
-                <SimpleForm/>
-                </div>
-                                  </div>
-                                  
-                   <div className="col-start-1 col-end-9 lg:col-start-11 lg:col-end-13 ml-auto justify-end reelcol">
-                    
-                   {props.reel && 
-                    <Draggable bounds={{top: -35}}> 
-                   <div className="z-100 cursor-move hidden lg:absolute lg:block">
-                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
+              
+              <div className="reelcol pt-lg lg:pt-xxxl right-0 pr-xs lg:absolute">
+              {props.reel && 
+                    <Draggable bounds={{top: -35, bottom:300}}> 
+                   <div className="z-100 cursor-move hidden lg:block">
+                         <video  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
@@ -84,8 +70,28 @@ export default function Navbar(props : any) {
                 </video> 
                 </div>     
                   }
+                  </div>
+
+              <div   id="home" className="pt-lg lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
+                <div className="flex flex-col  text-left lg:text-center homedesc">
+                {props.desc && <PortableText value={props.desc} />}
+
+                <div className="mt-lg mb-sm">
+                Sign up for a full pdf from Ritu Ghiya Projects.
                 </div>
+
+                <div className="simple">
+                <SimpleForm/>
                 </div>
+                                  </div>
+
+                    
+
+                </div>
+
+              
+
+
 
 
                 </> 
