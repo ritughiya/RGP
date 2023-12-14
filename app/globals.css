@@ -149,6 +149,10 @@ height:min-content;
 
 @media (max-width: 1000px) {
 
+  .simple input{
+      width: 250px;
+  }
+
   img{
     height:auto !important;
   }
@@ -168,17 +172,16 @@ height:min-content;
 }
 
   .reelvideo {
-    width: 100%;
     height: auto;
     margin-top:20px;
 }
 
 .reelvideo{
-  width: 400px;
+  width: 95%;
   height: auto;
 }
 
 .reelcol{
-  width:400px;
+  width: 95%;
 }
 }
