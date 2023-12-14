@@ -60,7 +60,7 @@ span.cold {
 }
 .inner-container {
     display: inline-block;
-    background-color: #00000015;
+    /* background-color: #00000015; */
 }
 .video-overlay {
     left: 50%;
@@ -74,8 +74,12 @@ video {
 }
 
 .reelvideo{
-  width: 100%;
+  width: 300px;
   height: auto;
+}
+
+.reelcol{
+  width:300px;
 }
 
 .homedesc p{
