@@ -39,7 +39,7 @@ const SimpleForm = () => <MailchimpSubscribe url={url}/>
 export default function Navbar(props : any) {
   return (
 <>
-     <div className="fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full ">
+     <div className="fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
       <div className="grid grid-cols-12 px-sm">
               <span className="col-start-1	col-end-3	">
               <Scrollchor className="cursor-pointer "  to="#home">{props.title}</Scrollchor></span>

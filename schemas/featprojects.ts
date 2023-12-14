@@ -133,7 +133,7 @@ export default {
             name: 'projectImages',
             title: 'Project Images',
             type: 'array', 
-            of: [{type: 'image'}]
+            of: [{type: 'image'}],
           }, 
     ]
   }

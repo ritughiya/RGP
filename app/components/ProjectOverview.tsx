@@ -91,6 +91,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 {projectVideoURL &&  <video preload="none" playsInline loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
+  <meta itemProp="name" content={projectTitle} />
 </video>  }
 
       </div>
@@ -186,6 +187,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 {projectVideoURL &&  <video preload="none" playsInline loop autoPlay muted className="" poster={urlFor(projectVideoposter && projectVideoposter).url()}>
   <source src={projectVideoURL} type="video/mp4" />
+  <meta itemProp="name" content={projectTitle} />
 </video>  }
 
       </div>
