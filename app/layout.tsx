@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   description: 'Design + development office focused on art, e-commerce, and culture. Based in NYC, Founded by Ritu Ghiya. ',
   keywords: ["Web development", "New York", "Art", "Ritu Ghiya"],
   openGraph: {
-    images: 'http://rgp.ltd/opengraph-image.png?dbc09b6b97b345d3',
+    images: 'http://rgp.ltd/opengraph-image.png',
   },
   twitter: {
-    images: ['http://rgp.ltd/opengraph-image.png?dbc09b6b97b345d3'],
+    images: ['http://rgp.ltd/opengraph-image.png'],
   },
 }
 
