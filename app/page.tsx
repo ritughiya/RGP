@@ -45,7 +45,7 @@ export default async function Home() {
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>
-              <div className="">
+              <div className="pt-sm">
               <ProjectOverview projectinfos={data.featprojects}/>
               </div>
               <div id="full" className="border-b pt-xxl mb-lg pb-xs hidden lg:block">

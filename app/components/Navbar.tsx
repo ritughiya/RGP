@@ -76,7 +76,7 @@ export default function Navbar(props : any) {
                 <div className="flex flex-col  text-left lg:text-center homedesc">
                 {props.desc && <PortableText value={props.desc} />}
 
-                <div className="mt-xl lg:mt-lg mb-sm">
+                <div className="mt-none lg:mt-lg mb-sm">
                 Sign up for a full pdf from Ritu Ghiya Projects.
                 </div>
 
