@@ -72,11 +72,11 @@ export default function Navbar(props : any) {
                   }
                   </div>
 
-              <div   id="home" className="pt-lg lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
+              <div   id="home" className="pt-lg lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xxxl border-b lg:border-0">
                 <div className="flex flex-col  text-left lg:text-center homedesc">
                 {props.desc && <PortableText value={props.desc} />}
 
-                <div className="mt-lg mb-sm">
+                <div className="mt-xl lg:mt-lg mb-sm">
                 Sign up for a full pdf from Ritu Ghiya Projects.
                 </div>
 
