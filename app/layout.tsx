@@ -5,29 +5,15 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rgp.ltd'),
   title: 'R     G     P',
   description: 'Design + development office focused on art, e-commerce, and culture. Based in NYC, Founded by Ritu Ghiya. ',
+  keywords: ["Web development", "New York", "Art", "Ritu Ghiya"],
   openGraph: {
-    title: 'R     G     P',
-    description: 'Design + development office focused on art, e-commerce, and culture. Based in NYC, Founded by Ritu Ghiya.',
-    url: 'https://rgp.ltd',
-    siteName: 'R     G     P',
-    images: [
-      {
-        url: 'https://rgp.ltd/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Ritu Ghiya Projects',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
+    images: 'http://rgp.ltd/opengraph-image.png?dbc09b6b97b345d3',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'R     G     P',
-    description: 'Design + development office focused on art, e-commerce, and culture. Based in NYC, Founded by Ritu Ghiya.',
-    images: ['https://rgp.ltd/twitter-image.png'],
+    images: ['http://rgp.ltd/opengraph-image.png?dbc09b6b97b345d3'],
   },
 }
 
