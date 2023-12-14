@@ -176,6 +176,10 @@ height:min-content;
     margin-top:20px;
 }
 
+.reelvideo video{
+  box-shadow:none;
+}
+
 .reelvideo{
   width: 95%;
   height: auto;
