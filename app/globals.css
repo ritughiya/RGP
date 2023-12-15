@@ -178,7 +178,7 @@ height:min-content;
   .reelvideo {
     box-shadow:none;
     width: 100%;
-    height: 280px;
+    height: 60vh;
     object-fit: cover;
 
 }
