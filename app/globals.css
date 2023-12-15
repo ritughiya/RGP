@@ -174,10 +174,11 @@ height:min-content;
   .reelvideo {
     height: auto;
     margin-top:20px;
+    box-shadow:none;
+
 }
 
 .reelvideo video{
-  box-shadow:none;
 }
 
 .reelvideo{
