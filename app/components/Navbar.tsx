@@ -46,13 +46,13 @@ export default function Navbar(props : any) {
               <span className="col-start-5 col-end-7 hidden lg:inline-block ">
               <Scrollchor className="cursor-pointer border-b border-b-black border-opacity-30 " to="#full">Index</Scrollchor>
                 </span>
-              <span className="col-span-1 col-start-10 lg:col-start-12">
+              <span className="col-span-1 col-start-11 lg:col-start-12">
               <Link className="cursor-pointer" href="mailto:info@rgp.ltd?subject=Inquiry from Website">info@rpg.ltd</Link>
               </span>
               </div>
               </div>
               
-              <div className="reelcol pt-lg lg:pt-xxxl right-0 pr-xs lg:absolute">
+              <div className="reelcol pt-xl lg:pt-xxxl right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
                     <Draggable bounds={{top: -35, bottom:300}}> 
                    <div className="z-100 cursor-move hidden lg:block">
@@ -72,8 +72,8 @@ export default function Navbar(props : any) {
                   }
                   </div>
 
-              <div   id="home" className="pt-lg lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xxxl border-b lg:border-0">
-                <div className="flex flex-col  text-left lg:text-center homedesc">
+              <div   id="home" className="pt-md lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xxxl border-b lg:border-0">
+                <div className="flex flex-col text-center homedesc">
                 {props.desc && <PortableText value={props.desc} />}
 
                 <div className="mt-none lg:mt-lg mb-sm">
