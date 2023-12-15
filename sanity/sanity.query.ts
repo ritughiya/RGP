@@ -11,6 +11,7 @@ export async function getProject() {
       "homeReelURL": homeReel.asset->url,
       homeReelposter,
       homeDesc,
+      mobileDesc,
       selectedProjects[]->,
       featprojects[]->{
         projectTitle,

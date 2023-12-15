@@ -46,7 +46,7 @@ export default function Navbar(props : any) {
               <span className="col-start-5 col-end-7 hidden lg:inline-block ">
               <Scrollchor className="cursor-pointer border-b border-b-black border-opacity-30 " to="#full">Index</Scrollchor>
                 </span>
-              <span className="col-span-1 col-start-11 lg:col-start-12">
+              <span className="col-span-1 col-start-10 lg:col-start-12">
               <Link className="cursor-pointer" href="mailto:info@rgp.ltd?subject=Inquiry from Website">info@rpg.ltd</Link>
               </span>
               </div>
@@ -73,8 +73,14 @@ export default function Navbar(props : any) {
                   </div>
 
               <div   id="home" className="pt-md lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xxxl border-b lg:border-0">
-                <div className="flex flex-col text-center homedesc">
+                <div className="flex flex-col text-left lg:text-center homedesc">
+                  <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} />}
+                </div>
+
+                <div className="lg:hidden block">
+                {props.mobileDesc && <PortableText value={props.mobileDesc} />}
+                </div>
 
                 <div className="mt-none lg:mt-lg mb-sm">
                 Sign up for a full pdf from Ritu Ghiya Projects.

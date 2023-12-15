@@ -25,6 +25,12 @@ const homepage = {
       of: [{type: 'block'}]
     },
     {
+      name: 'mobileDesc',
+      title: 'Description – Mobile',
+      type: 'array', 
+      of: [{type: 'block'}]
+    },
+    {
       name: 'homeReel',
       title: 'Reel',
       type: 'file'
