@@ -50,7 +50,7 @@ export default function Navbar(props : any) {
 
             {props.reel && 
                    <div className=" z-100 block lg:hidden">
-                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" >
+                         <video playsInline loop autoPlay muted className="reelvideo" >
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
