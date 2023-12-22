@@ -33,7 +33,7 @@ const homepage = {
     {
       name: 'homeReel',
       title: 'Reel',
-      type: 'file'
+      type: 'cloudinary.asset'
     },
     {
       name: 'homeReelposter',

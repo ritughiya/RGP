@@ -1,5 +1,6 @@
 // app/page.tsx
 
+
 import React, { useState } from 'react';
 import { getProject } from "@/sanity/sanity.query";
 import { getProfile } from "@/sanity/sanity.query";
@@ -13,6 +14,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Link from 'next/link';
 import Script from 'next/script';
+
 
 export const revalidate = 60;
 
@@ -38,9 +40,13 @@ export default async function Home() {
         `}
       </Script>
     <div>
+
+
+
        {project.map((data) => (
             <div key={data._id} className=" pl-sm pr-sm font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} mobileDesc={data.mobileDesc} reel={data.homeReelURL} reelposter={data.homeReelposter} />
+              
                 <div className="border-t border-b mb-md hidden lg:block">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>

@@ -20,22 +20,6 @@ const defaultAnimate: AnimateConfig = {
 
 const SimpleForm = () => <MailchimpSubscribe url={url}/>
 
-
-// use the render prop and your custom form
-// const CustomForm = () => (
-//   <MailchimpSubscribe
-//     url={url}
-//     render={({ subscribe, status, message }) => (
-//       <div className="customform">
-//         <SimpleForm onSubmitted={formData => subscribe(formData)} />
-//         {status === "sending" && <div style={{ color: "#00000030", marginBottom: "10px"  }}>sending...</div>}
-//         {status === "error" && <div style={{ color: "#00000030", marginBottom: "10px"  }} dangerouslySetInnerHTML={{__html: message}}/>}
-//         {status === "success" && <div style={{ color: "#00000030", marginBottom: "10px" }}>Subscribed !</div>}
-//       </div>
-//     )}
-//   />
-// )
-
 export default function Navbar(props : any) {
   return (
 <>
@@ -52,11 +36,12 @@ export default function Navbar(props : any) {
               </div>
               </div>
               
-              <div className="reelcol pt-xl lg:pt-xxxl right-0 pr-0 lg:pr-xs lg:absolute">
+              <div className="reelcol pt-xxl lg:pt-xxxl right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
-                    <Draggable bounds={{top: -35, bottom:300}}> 
+              <Draggable>
+                    {/* <Draggable bounds={{top: -35, bottom:300}}>  */}
                    <div className="z-100 cursor-move hidden lg:block">
-                         <video  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
+                         <video  playsInline loop autoPlay muted className="reelvideo" >
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
@@ -65,14 +50,14 @@ export default function Navbar(props : any) {
 
             {props.reel && 
                    <div className=" z-100 block lg:hidden">
-                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
+                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" >
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
                   }
                   </div>
 
-              <div   id="home" className="pt-md lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl lg:pb-xxxl border-b lg:border-0">
+              <div   id="home" className="pt-xl lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl lg:pb-xxxl border-b lg:border-0">
                 <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} />}

@@ -3,6 +3,7 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {media} from 'sanity-plugin-media'
+import {cloudinarySchemaPlugin} from 'sanity-plugin-cloudinary'
 
 
 export default defineConfig({
@@ -15,7 +16,7 @@ export default defineConfig({
   apiVersion: "2023-12-14",
 
 
-  plugins: [deskTool(), visionTool(), media()],
+  plugins: [deskTool(), visionTool(), media(), cloudinarySchemaPlugin()],
 
   schema: {
     types: schemaTypes,

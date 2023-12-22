@@ -82,13 +82,9 @@ export default {
           {
             title: 'Video File',
             name: 'projectVideofile',
-            type: 'file'
+            type: 'cloudinary.asset'
           },
-          {
-            title: 'Video URL',
-            name: 'videoURL',
-            type: 'url'
-          },
+
           {
             title: 'Video Modal 1',
             name: 'videomodal1',
