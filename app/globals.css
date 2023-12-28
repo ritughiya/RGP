@@ -94,6 +94,8 @@ video {
 
 .homedesc{
 height:min-content;
+width: 510px;
+margin: 0 auto;
 }
 
 .react-draggable,
@@ -155,10 +157,11 @@ height:min-content;
 
 @media (max-width: 1000px) {
 
-  /* .homedesc p{
-    margin-bottom:8px !important;
-  } */
-
+  .homedesc{
+    height:min-content;
+    width: auto;
+    margin: 0 auto;
+    }
   .simple input{
       width: 70%;
   }

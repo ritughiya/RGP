@@ -12,6 +12,9 @@ export default function Footer(props : any) {
                 Ritu Ghiya Projects
               </span>
               <span className="text-center">
+              Stack - React.js, Next.js, Javascript, Headless, Shopify, Wordpress/PHP
+              </span>
+              <span className="text-center">
                 email - info@rgp.ltd
                 </span>
               </div>

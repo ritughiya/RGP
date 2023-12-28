@@ -48,16 +48,10 @@ export default function Navbar(props : any) {
                 </Draggable> 
                   }
 
-            {props.reel && 
-                   <div className=" z-100 block lg:hidden">
-                         <video playsInline loop autoPlay muted className="reelvideo" >
-                    <source src={props.reel} type="video/mp4" />
-                </video> 
-                </div>     
-                  }
+
                   </div>
 
-              <div   id="home" className="pt-xl lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl lg:pb-xxxl border-b lg:border-0">
+              <div   id="home" className="pt-none lg:pt-xxxl lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl lg:pb-xxxl border-b lg:border-0">
                 <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} />}
