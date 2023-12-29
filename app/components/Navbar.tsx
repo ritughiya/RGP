@@ -38,7 +38,7 @@ export default function Navbar(props : any) {
               
               <div className="reelcol pt-xxl lg:pt-xxxl right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
-              <Draggable>
+              <Draggable  bounds={{top: -35}}>
                     {/* <Draggable bounds={{top: -35, bottom:300}}>  */}
                    <div className="z-100 cursor-move hidden lg:block">
                          <video  playsInline loop autoPlay muted className="reelvideo" >
