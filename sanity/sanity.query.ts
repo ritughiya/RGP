@@ -8,7 +8,7 @@ export async function getProject() {
     groq`*[_type == "homepage"]{
       _id,
       homeTitle,
-      "homeReelURL": homeReel.url,
+      "homeReelURL": homeReel.secure_url,
       homeReelposter,
       homeDesc,
       mobileDesc,
@@ -23,7 +23,7 @@ export async function getProject() {
         projectServicesList,
         projectType,
         projectVideo,
-        "cloudURL": projectVideofile.url,
+        "cloudURL": projectVideofile.secure_url,
         "projectVideoURL": projectVideofile.asset->url,
         projectVideoposter,
         videoID,
