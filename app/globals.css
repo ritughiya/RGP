@@ -155,7 +155,7 @@ margin: 0 auto;
   margin-bottom: 8px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1070px) {
 
   .homedesc{
     height:min-content;

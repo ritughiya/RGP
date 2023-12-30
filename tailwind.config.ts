@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     screens:{
       'md': '900px',
-      'lg': '1000px',
+      'lg': '1070px',
     },
     backgroundColor: ({ theme }) => ({
             ...theme('colors'),
