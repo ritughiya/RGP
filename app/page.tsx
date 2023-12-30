@@ -44,7 +44,7 @@ export default async function Home() {
 
 
        {project.map((data) => (
-            <div key={data._id} className="lg:pt-none pt-xxl lg:px-sm px-xl font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
+            <div key={data._id} className="lg:pt-xxl pt-xl lg:px-sm px-xl font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} mobileDesc={data.mobileDesc} reel={data.homeReelURL} reelposter={data.homeReelposter} />
               
                 <div className="border-t border-b mb-md hidden lg:block">
