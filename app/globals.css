@@ -140,6 +140,10 @@ margin: 0 auto;
   color: black !important;
 }
 
+.lighter{
+  color:#00000070;
+}
+
 .simple button:hover{
   background-color: #00000010;
   color:white;
