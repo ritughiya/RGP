@@ -23,7 +23,7 @@ const SimpleForm = () => <MailchimpSubscribe url={url}/>
 export default function Navbar(props : any) {
   return (
 <>
-     <div className="fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
+     <div className="hidden lg:block fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
       <div className="grid grid-cols-12 px-sm">
               <span className="col-start-1	col-end-3	">
               <Scrollchor className="cursor-pointer "  to="#home">{props.title}</Scrollchor></span>
@@ -36,7 +36,7 @@ export default function Navbar(props : any) {
               </div>
               </div>
               
-              <div className="reelcol pt-xxl lg:pt-xxxl right-0 pr-0 lg:pr-xs lg:absolute">
+              <div className="reelcol pt-none lg:pt-xxxl right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
               <Draggable  bounds={{top: -35}}>
                     {/* <Draggable bounds={{top: -35, bottom:300}}>  */}
@@ -51,7 +51,7 @@ export default function Navbar(props : any) {
 
                   </div>
 
-              <div   id="home" className="pt-none lg:pt-xxxl lg:mb-xxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xl border-b lg:border-0">
+              <div   id="home" className="pt-none lg:pt-xxxl lg:mb-xxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 pb-xxl lg:pb-xl border-b lg:border-0">
                 <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} />}
