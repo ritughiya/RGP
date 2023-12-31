@@ -142,6 +142,11 @@ margin: 0 auto;
 
 .lighter{
   color:#00000070;
+  transition: all 0.25s;
+}
+
+.lighter:hover{
+  color:#000000;
 }
 
 .simple button:hover{
