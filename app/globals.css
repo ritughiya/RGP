@@ -98,6 +98,11 @@ width: 510px;
 margin: 0 auto;
 }
 
+.homedesc a{
+  border-bottom-color: rgb(0 0 0 / 0.3);  border-bottom-width: 1px;
+  cursor: pointer;
+}
+
 .react-draggable,
 .react-draggable-dragged{
   z-index:100;

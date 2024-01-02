@@ -21,6 +21,20 @@ const defaultAnimate: AnimateConfig = {
 const SimpleForm = () => <MailchimpSubscribe url={url}/>
 
 export default function Navbar(props : any) {
+
+  const components = {
+    marks: { 
+    
+
+      link: ({value,children} : {value?:any, children?:any}) => {
+        const { blank, href } = value
+        return blank ?
+          <a href={href} target="_blank" rel="noopener">{children}</a>
+          : <a href={href}>{children}</a>
+      }
+    }
+  }
+
   return (
 <>
      <div className="hidden lg:block fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
@@ -51,17 +65,19 @@ export default function Navbar(props : any) {
 
                   </div>
 
-              <div   id="home" className="lg:pt-xxl pt-xl  lg:mb-xxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 lg:pb-xl pb-none">
+              <div   id="home" className="lg:pt-xxl pt-xl  lg:mb-xxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 ">
                 <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
-                {props.desc && <PortableText value={props.desc} />}
+                {props.desc && <PortableText value={props.desc} components={components}/>}
+                
+
                 </div>
 
                 <div className="lg:hidden block">
-                {props.mobileDesc && <PortableText value={props.mobileDesc} />}
+                {props.mobileDesc && <PortableText value={props.mobileDesc} components={components}/>}
                 </div>
 
-                <div className="mt-none lg:mt-lg mb-sm">
+                <div className="mt-none mb-sm">
                 Sign up for a full pdf from Ritu Ghiya Projects.
                 </div>
 

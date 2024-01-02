@@ -2,7 +2,6 @@
 
 import { defineField } from "sanity";
 import { BiUser } from "react-icons/bi";
-import  about  from  './profile'
 import  projects  from  './projects'
 import  featprojects  from  './featprojects'
 
@@ -22,14 +21,69 @@ const homepage = {
       name: 'homeDesc',
       title: 'Description',
       type: 'array', 
-      of: [{type: 'block'}]
+      of: [{type: 'block',
+      marks: {
+          decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Code', value: 'code' },
+              { title: 'Highlight', value: 'highlight' }
+          ],
+          annotations: [
+            {
+              name: 'link',
+              type: 'object',
+              title: 'External link',
+              fields: [
+                {
+                  name: 'href',
+                  type: 'url',
+                  title: 'URL'
+                },
+                {
+                  title: 'Open in new tab',
+                  name: 'blank',
+                  description: 'Read https://css-tricks.com/use-target_blank/',
+                  type: 'boolean'
+                }
+              ]
+            },
+            ]
+      }}]
     },
     {
       name: 'mobileDesc',
       title: 'Description – Mobile',
       type: 'array', 
-      of: [{type: 'block'}]
-    },
+      of: [{type: 'block',
+      marks: {
+          decorators: [
+              { title: 'Strong', value: 'strong' },
+              { title: 'Emphasis', value: 'em' },
+              { title: 'Code', value: 'code' },
+              { title: 'Highlight', value: 'highlight' }
+          ],
+          annotations: [
+            {
+              name: 'link',
+              type: 'object',
+              title: 'External link',
+              fields: [
+                {
+                  name: 'href',
+                  type: 'url',
+                  title: 'URL'
+                },
+                {
+                  title: 'Open in new tab',
+                  name: 'blank',
+                  description: 'Read https://css-tricks.com/use-target_blank/',
+                  type: 'boolean'
+                }
+              ]
+            },
+            ]
+      }}]    },
     {
       name: 'homeReel',
       title: 'Reel',
