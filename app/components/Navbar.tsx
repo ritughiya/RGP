@@ -51,7 +51,7 @@ export default function Navbar(props : any) {
 
                   </div>
 
-              <div   id="home" className="lg:pt-xxl pt-xl  lg:mb-xxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 lg:pb-xl pb-none">
+              <div   id="home" className="lg:pt-xxl pt-lg  lg:mb-xxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 lg:pb-xl pb-none">
                 <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} />}

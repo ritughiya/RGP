@@ -44,14 +44,14 @@ export default async function Home() {
 
 
        {project.map((data) => (
-            <div key={data._id} className="lg:px-sm px-xl font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
+            <div key={data._id} className="lg:px-sm px-lg font-sans text-opacity-80 tracking-[0.9px] text-sm  border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} mobileDesc={data.mobileDesc} reel={data.homeReelURL} reelposter={data.homeReelposter} />
               
                 <div className="border-t border-b mb-md hidden lg:block">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>
-              <div className="lg:pt-sm">
+              <div className="pt-md lg:pt-sm">
               <ProjectOverview projectinfos={data.featprojects}/>
               </div>
               <div id="full" className="border-b pt-xxl mb-lg pb-xs hidden lg:block">
