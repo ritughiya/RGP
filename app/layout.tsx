@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://rgp.ltd'),
   title: 'R     G     P',
-  description: 'Design + development office focused on art, e-commerce, and culture. Based in NYC, founded by Ritu Ghiya. ',
+  description: 'Ritu Ghiya Projects is a design + development office focused on art, e-commerce, and culture. Based in NYC, founded by Ritu Ghiya. ',
   keywords: ["Web development", "New York", "Art", "Ritu Ghiya"],
   openGraph: {
     images: 'http://rgp.ltd/opengraph-image.png',
