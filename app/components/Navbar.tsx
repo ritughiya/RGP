@@ -78,7 +78,7 @@ export default function Navbar(props : any) {
                 </div>
 
                 <div className="mt-none mb-sm">
-                Sign up for a full pdf from Ritu Ghiya Projects.
+                Sign up for a pdf from Ritu Ghiya Projects.
                 </div>
 
                 <div className="simple">
