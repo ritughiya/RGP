@@ -7,7 +7,7 @@ import { PortableText } from "@portabletext/react";
 export default function Footer(props : any) {
   return (
 <>
-     <div id="capabilities" className="text-opacity-80 pt-md lg:pt-xxxxxl lg:mb-xxxxxl mb-xl text-left lg:text-center font-sans text-sm tracking-[0.9px] w-full flex flex-col justify-center footerdesc">
+     <div className="text-opacity-80 pt-md lg:pt-xxxxxl lg:mb-xxxxxl mb-xl text-left lg:text-center font-sans text-sm tracking-[0.9px] w-full flex flex-col justify-center footerdesc">
               
                    <span className="mb-md">
                Digital design & build, UX/UI interaction design, Web applications, Headless CMS, Headless e-commerce, Front & back-end development, Experimental development, GraphQL integration, Creative strategy, Digital concepts
@@ -18,7 +18,7 @@ export default function Footer(props : any) {
               <span className="mb-md">
                 Guest Talks: HSD Düsseldorf, Cooper Union, Pratt, Are.na, Cornell, Parsons / New School, Yale
                 </span>
-              <span className="">
+              <span className="" id="capabilities" >
                 Email: Info@rgp.ltd
                 </span>
               </div>
