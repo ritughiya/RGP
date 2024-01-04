@@ -9,16 +9,16 @@ export default function Footer(props : any) {
 <>
      <div id="capabilities" className="text-opacity-80 pt-md lg:pt-xxxxxl lg:mb-xxxxxl mb-xl text-left lg:text-center font-sans text-sm tracking-[0.9px] w-full flex flex-col justify-center footerdesc">
               
-                   <span className="mb-sm">
+                   <span className="mb-md">
                Digital design & build, UX/UI interaction design, Web applications, Headless CMS, Headless e-commerce, Front & back-end development, Experimental development, GraphQL integration, Creative strategy, Digital concepts
               </span>
-              <span className="mb-sm">
+              <span className="mb-md">
               Stack: HTML, CSS, Javascript, React.js, Vue, Next, Node.js, Wordpress / PHP, Shopify and Shopify Plus
               </span>
-              <span className="mb-sm">
+              <span className="mb-md">
                 Guest Talks: HSD Düsseldorf, Cooper Union, Pratt, Are.na, Cornell, Parsons / New School, Yale
                 </span>
-              <span className="mb-sm">
+              <span className="">
                 Email: Info@rgp.ltd
                 </span>
               </div>

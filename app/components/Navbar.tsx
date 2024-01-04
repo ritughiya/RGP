@@ -64,7 +64,7 @@ export default function Navbar(props : any) {
               </div>
 
               
-              <div className="reelcol lg:pt-xxxl pt-none right-0 pr-0 lg:pr-xs lg:absolute">
+              <div className="reelcol lg:pt-xxxllll pt-none right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
               <Draggable  bounds={{top: -35}}>
                     {/* <Draggable bounds={{top: -35, bottom:300}}>  */}
