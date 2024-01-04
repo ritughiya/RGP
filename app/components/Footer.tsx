@@ -7,15 +7,19 @@ import { PortableText } from "@portabletext/react";
 export default function Footer(props : any) {
   return (
 <>
-     <div className="text-opacity-80 px-md  mt-xxxl mb-xxxl font-sans text-sm tracking-[0.9px] w-full flex flex-col justify-center">
-     <span className="lg:text-center">
-                Ritu Ghiya Projects
+     <div id="capabilities" className="text-opacity-80 pt-md lg:pt-xxxxxl lg:mb-xxxxxl mb-xl text-left lg:text-center font-sans text-sm tracking-[0.9px] w-full flex flex-col justify-center footerdesc">
+              
+                   <span className="mb-sm">
+               Digital design & build, UX/UI interaction design, Web applications, Headless CMS, Headless e-commerce, Front & back-end development, Experimental development, GraphQL integration, Creative strategy, Digital concepts
               </span>
-              {/* <span className="lg:text-center">
-              React.js, Headless, Shopify, Wordpress/PHP
-              </span> */}
-              <span className="lg:text-center">
-                Email - info@rgp.ltd
+              <span className="mb-sm">
+              Stack: HTML, CSS, Javascript, React.js, Vue, Next, Node.js, Wordpress / PHP, Shopify and Shopify Plus
+              </span>
+              <span className="mb-sm">
+                Guest Talks: HSD Düsseldorf, Cooper Union, Pratt, Are.na, Cornell, Parsons / New School, Yale
+                </span>
+              <span className="mb-sm">
+                Email: Info@rgp.ltd
                 </span>
               </div>
 

@@ -55,7 +55,7 @@ span.cold {
 
 .outer-container {
     width: auto;
-    height: 40vh;
+    height: 50vh;
     text-align: center;
 }
 .inner-container {
@@ -69,13 +69,13 @@ span.cold {
 }
 video {
     width: auto;
-    height: 40vh;
+    height: 50vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .reelvideo{
-  width: 260px;
-  height: 260px;
+  width: 250px;
+  height: 250px;
   object-fit:cover;
   background-color: #ededed;
 }
@@ -92,10 +92,18 @@ video {
   margin-bottom:12px !important;
 }
 
-.homedesc{
+.homedesc, .footerdesc{
 height:min-content;
 width: 520px;
-margin: 0 auto;
+}
+
+.footerdesc{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.homedesc{
+  margin: 0 auto;
 }
 
 .homedesc a{
@@ -109,7 +117,7 @@ margin: 0 auto;
 }
 
 .inner-container-gif img{
-  height:40vh;
+  height:50vh;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -155,6 +163,15 @@ margin: 0 auto;
   color:#000000;
 }
 
+.bolder{
+font-weight:normal;  
+transition: all 0.25s;
+}
+
+.bolder:hover{
+font-weight:bold;
+}
+
 .simple button:hover{
   background-color: #00000010;
   color:white;
@@ -176,6 +193,11 @@ margin: 0 auto;
     height:min-content;
     width: auto;
     margin: 0 auto;
+    }
+    
+    .footerdesc{
+    height:min-content;
+    width: auto;
     }
   .simple input{
       width: 70%;

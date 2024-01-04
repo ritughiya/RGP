@@ -51,18 +51,24 @@ export default async function Home() {
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>
-              <div className="mt-md lg:mt-none">
+              <div className="mt-md lg:mt-xxl border-b pb-xl lg:pb-none lg:border-none">
               <ProjectOverview projectinfos={data.featprojects}/>
               </div>
+
+
               <div id="full" className="border-b pt-xxl mb-lg pb-xs hidden lg:block">
                 <div className="border-t">
               <ProjectIndex projectinfos={data.indexProjects}/>
               </div>
               </div> 
+              <div className="lg:block lg:pb-sm">
+              <div className="border-b mb-md">
+              <Footer />
+              </div>
+              </div>
               </div> 
 
             ))}
-<Footer />
     </div>
     </>
   );

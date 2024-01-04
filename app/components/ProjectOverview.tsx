@@ -73,7 +73,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
   <>
 
 
-<div className="Project-Info py-md lg:py-xxl" id={projectLink}>
+<div className="Project-Info py-md lg:py-xxxllll" id={projectLink}>
 
 <div className="flex flex-col">
 {cloudURL && <div className="outer-container">
@@ -139,7 +139,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                       width={0}
                       height={0}
                       sizes="100vw"
-                      style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: '100%', height: '40vh', objectFit: 'contain' }} // optional
+                      style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: '100%', height: '50vh', objectFit: 'contain' }} // optional
                     /> 
     </div>
 ))} 
@@ -173,7 +173,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
         <>
 
 
-        <div className="Project-Info py-md lg:py-xxl" id={projectLink}>
+        <div className="Project-Info py-md lg:py-xxxllll" id={projectLink}>
         
         <div className="flex flex-col">
         {cloudURL && <div className="outer-container">
@@ -239,7 +239,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                               width={0}
                               height={0}
                               sizes="100vw"
-                              style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: '100%', height: '40vh', objectFit: 'contain' }} // optional
+                              style={{ top: '0', left: '0', maxWidth: '900px', maxHeight: '100%', width: '100%', height: '50vh', objectFit: 'contain' }} // optional
                             /> 
             </div>
         ))} 

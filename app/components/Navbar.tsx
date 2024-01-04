@@ -40,17 +40,31 @@ export default function Navbar(props : any) {
      <div className="hidden lg:block fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
       <div className="grid grid-cols-12 px-sm">
               <span className="col-start-1	col-end-3	">
-              <Scrollchor className="cursor-pointer font-semibold"  to="#home">{props.title}</Scrollchor></span>
-              <span className="col-start-5 col-end-7 hidden lg:inline-block ">
-              <Scrollchor className="cursor-pointer lighter" to="#full">Index</Scrollchor>
+              <Scrollchor className="cursor-pointer bolder"  to="#home">{props.title}</Scrollchor></span>
+              <span className="col-start-5 col-end-6 hidden lg:inline-block ">
+              <Scrollchor className="cursor-pointer bolder" to="#full">Index</Scrollchor>
                 </span>
-              <span className="col-span-1 col-start-10 lg:col-start-12">
+                <span className="col-start-10 col-end-10 hidden lg:inline-block ">
+              <Scrollchor className="cursor-pointer bolder" to="#capabilities">Capabilities</Scrollchor>
+                </span>
+              {/* <span className="col-span-1 col-start-10 lg:col-start-11">
               <Link className="cursor-pointer" href="mailto:info@rgp.ltd?subject=Inquiry from Website">info@rpg.ltd</Link>
-              </span>
+              </span> */}
               </div>
               </div>
+
+              <div className="lg:hidden block fixed bg-white pt-sm pb-sm top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
+      <div className="grid grid-cols-12 px-md">
+              <span className="col-start-1	col-end-3	">
+              <Scrollchor className="cursor-pointer font-semibold"  to="#home">{props.title}</Scrollchor></span>
+                <span className="col-start-11 col-end-12 inline-block lg:hidden ">
+              <Scrollchor className="cursor-pointer bolder" to="#capabilities">Capabilities</Scrollchor>
+                </span>
+              </div>
+              </div>
+
               
-              <div className="reelcol lg:pt-xxl pt-none right-0 pr-0 lg:pr-xs lg:absolute">
+              <div className="reelcol lg:pt-xxxl pt-none right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
               <Draggable  bounds={{top: -35}}>
                     {/* <Draggable bounds={{top: -35, bottom:300}}>  */}
@@ -65,7 +79,7 @@ export default function Navbar(props : any) {
 
                   </div>
 
-              <div   id="home" className="lg:pt-xxl pt-md  lg:mb-xxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 ">
+              <div   id="home" className="lg:pt-xxxllll pt-xxl mb-xl  lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 ">
                 <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} components={components}/>}
