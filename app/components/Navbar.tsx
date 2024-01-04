@@ -57,7 +57,7 @@ export default function Navbar(props : any) {
       <div className="grid grid-cols-12 px-md">
               <span className="col-start-1	col-end-3	">
               <Scrollchor className="cursor-pointer font-semibold"  to="#home">{props.title}</Scrollchor></span>
-                <span className="col-start-11 col-end-12 inline-block lg:hidden ">
+                <span className="col-start-10 col-end-12 inline-block lg:hidden ">
               <Scrollchor className="cursor-pointer bolder" to="#capabilities">Capabilities</Scrollchor>
                 </span>
               </div>
