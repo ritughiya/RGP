@@ -34,7 +34,8 @@ body {
   color: rgb(var(--text-color));
   background-color: rgb(var(--background-color));
 }
-.Project-Info{
+.standard-lh{
+  line-height:21px;
 }
 
 span.cola {

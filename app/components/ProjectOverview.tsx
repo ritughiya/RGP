@@ -159,7 +159,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 
                         <div className="text-left projtxt grid grid-cols-12 mt-sm">
-                    <div className="lg:col-start-5 col-start-1 col-end-12 ">
+                    <div className="lg:col-start-5 col-start-1 col-end-12 standard-lh">
                     {projectClients && <PortableText value={projectClients} />}
                     {projectDescription && <PortableText value={projectDescription} />}
                     </div>
@@ -259,7 +259,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
         
         
                                 <div className="text-left projtxt grid grid-cols-12 mt-sm">
-                            <div className="lg:col-start-5 col-start-1 col-end-12 ">
+                            <div className="lg:col-start-5 col-start-1 col-end-12 standard-lh">
                             {projectClients && <PortableText value={projectClients} />}
                             {projectDescription && <PortableText value={projectDescription} />}
                             </div>
