@@ -47,18 +47,8 @@ export default function Navbar(props : any) {
                 <span className="col-start-10 col-end-10 hidden lg:inline-block ">
               <Scrollchor className="cursor-pointer bolder" to="#capabilities">Capabilities</Scrollchor>
                 </span>
-              {/* <span className="col-span-1 col-start-10 lg:col-start-11">
-              <Link className="cursor-pointer" href="mailto:info@rgp.ltd?subject=Inquiry from Website">info@rpg.ltd</Link>
-              </span> */}
               </div>
               </div>
-
-              {/* <div className="lg:hidden block fixed bg-white pt-sm pb-sm top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.9px] w-full " id="#content">
-      <div className="flex justify-between px-md">
-              <Scrollchor className="cursor-pointer font-semibold"  to="#home">{props.title}</Scrollchor>
-              <Scrollchor className="cursor-pointer bolder" to="#capabilities">Capabilities</Scrollchor>
-              </div>
-              </div> */}
 
               
               <div className="reelcol lg:pt-xxxllll pt-none right-0 pr-0 lg:pr-xs lg:absolute">

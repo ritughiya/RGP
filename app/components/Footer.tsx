@@ -13,7 +13,7 @@ export default function Footer(props : any) {
                Digital design & build, UX/UI interaction design, Web applications, Headless CMS, Headless e-commerce, Front & back-end development, Experimental development, GraphQL integration, Version control, Creative strategy, Digital concepts
               </span>
               <span className="mb-md">
-              Stack: HTML, CSS, Javascript, React.js, Vue, Next, Node.js, Wordpress / PHP, Shopify and Shopify Plus
+              Stack: HTML, CSS, Javascript, React.js, Vue, Next, Node.js, Wordpress / PHP, Netlify, Shopify and Shopify Plus
               </span>
               <span className="mb-md">
                 Guest Talks: HSD Düsseldorf, Cooper Union, Pratt, Are.na, Cornell, Parsons / New School, Yale
