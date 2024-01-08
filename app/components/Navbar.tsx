@@ -50,42 +50,23 @@ export default function Navbar(props : any) {
               </div>
               </div>
 
-              
-              {/* <div className="reelcol lg:pt-xxxllll pt-none right-0 pr-0 lg:pr-xs lg:absolute">
-              {props.reel && 
-              <Draggable  bounds={{top: -35}}>
-                   <div className="z-100 cursor-move hidden lg:block">
-                         <video  playsInline loop autoPlay muted className="reelvideo" >
-                    <source src={props.reel} type="video/mp4" />
-                </video> 
-                </div>     
-                </Draggable> 
-                  }
+            
 
-
-                  </div> */}
-
-                  <div className="reelcol pt-md lg:pt-xxxllll pt-none right-0 pr-0 lg:pr-xs lg:absolute">
+                  <div className="reelcol pt-md lg:pt-xxxllll pb-md lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
                     <Draggable bounds={{top: -35, bottom:300}}> 
-                   <div className="z-100 cursor-move hidden lg:block">
+                   <div className="z-100 cursor-move lg:block">
                          <video  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
                 </Draggable> 
                   }
-            {props.reel && 
-                   <div className=" z-100 block lg:hidden">
-                         <video preload="none"  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
-                    <source src={props.reel} type="video/mp4" />
-                </video> 
-                </div>     
-                  }
+
                   </div>
 
-              <div   id="home" className="lg:pt-xxxllll pt-md  mb-xl  lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 ">
-                <div className="flex flex-col text-left xl:text-center homedesc">
+              <div   id="home" className="lg:pt-xxxllll lg:pb-none pt-md pb-md mb-xl  lg:mb-xxxxxl text-opacity-80 font-sans text-smm tracking-[0.9px] w-full z-40 ">
+                <div className="flex flex-col text-left lg:text-center homedesc">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} components={components}/>}
                 
