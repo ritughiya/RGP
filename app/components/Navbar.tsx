@@ -55,12 +55,18 @@ export default function Navbar(props : any) {
                   <div className="reelcol pt-md lg:pt-xxxllll pb-xl lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
                     <Draggable bounds={{top: -35, bottom:300}}> 
-                   <div className="z-100 cursor-move lg:block">
+                   <div className="z-100 cursor-move lg:block hidden">
                          <video  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
                     <source src={props.reel} type="video/mp4" />
                 </video> 
                 </div>     
                 </Draggable> 
+                  }
+
+                {props.reelgif && 
+                   <div className="z-100 lg:hidden block">
+                        <img src={props.reelgif} />
+                </div>     
                   }
 
                   </div>

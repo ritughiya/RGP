@@ -13,6 +13,7 @@ export type ProjectType = {
   homeDesc: string,
   homeReel: File,
   homeReelURL: URL,
+  homeReelGifURL: URL,
   homeReelposter: HTMLImageElement,
   selectedProjects: SelectInfo[],
   featprojects: ProjectInfo[],

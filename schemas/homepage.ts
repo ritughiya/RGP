@@ -90,6 +90,11 @@ const homepage = {
       type: 'cloudinary.asset'
     },
     {
+      name: 'homeReelgif',
+      title: 'Reel – Gif',
+      type: 'cloudinary.asset'
+    },
+    {
       name: 'homeReelposter',
       title: 'Reel Poster',
       type: 'image'

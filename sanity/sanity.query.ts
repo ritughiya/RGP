@@ -9,6 +9,7 @@ export async function getProject() {
       _id,
       homeTitle,
       "homeReelURL": homeReel.secure_url,
+      "homeReelGifURL": homeReelgif.secure_url,
       homeReelposter,
       homeDesc,
       mobileDesc,
