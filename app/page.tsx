@@ -44,25 +44,25 @@ export default async function Home() {
 
 
        {project.map((data) => (
-            <div key={data._id} className="lg:px-sm px-md font-sans text-opacity-80 tracking-[0.9px] text-smmm lg:text-smm border-opacity-30	">
+            <div key={data._id} className="lg:px-sm px-md font-sans text-opacity-80 tracking-[0.7px] text-smmm lg:text-smm border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} mobileDesc={data.mobileDesc} reel={data.homeReelURL} reelgif={data.homeReelGifURL} reelposter={data.homeReelposter} />
               
-                <div className="border-t border-b mb-md hidden lg:block">
+                <div className="lg:border-t lg:border-b lg:mb-md ">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>
-              <div className="mt-none lg:mt-xxl border-b pb-xl lg:pb-none lg:border-none">
+              <div className="mt-none lg:mt-xxl lg:border-b pb-xl lg:pb-none lg:border-none">
               <ProjectOverview projectinfos={data.featprojects}/>
               </div>
 
 
-              <div id="full" className="border-b pt-xxl mb-lg pb-xs hidden lg:block">
-                <div className="border-t">
+              <div id="full" className="lg:border-b pt-xxl mb-lg pb-xs hidden lg:block">
+                <div className="lg:border-t">
               <ProjectIndex projectinfos={data.indexProjects}/>
               </div>
               </div> 
               <div className="lg:block lg:pb-sm">
-              <div className="border-b mb-md">
+              <div className="lg:border-b mb-md">
               <Footer />
               </div>
               </div>

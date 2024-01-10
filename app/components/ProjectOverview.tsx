@@ -73,7 +73,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
   <>
 
 
-<div className="Project-Info py-xl lg:py-xxxlll" id={projectLink}>
+<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xl lg:py-xxxlll" id={projectLink}>
 
 <div className="flex flex-col">
 {cloudURL && <div className="outer-container">
@@ -81,13 +81,13 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
 {videomodal1 && 
 <div>
-<button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+<button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs  px-md">
   <PortableText value={videomodal1} components={components}/>
  </button>
  </div>}
  {videomodal2 && 
  <div>
-<button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+<button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs  px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
   Copy Link
  </button>
  </div>}
@@ -117,13 +117,13 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 
       <div>
-      <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs px-md">
         <PortableText value={videomodal1} components={components}/>
        </button>
        </div>}
        {videomodal2 && 
        <div>
-      <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+      <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
         Copy Link
        </button>
        </div>}
@@ -173,7 +173,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
         <>
 
 
-        <div className="Project-Info py-xl lg:py-xxxlll" id={projectLink}>
+        <div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xl lg:py-xxxlll" id={projectLink}>
         
         <div className="flex flex-col">
         {cloudURL && <div className="outer-container">
@@ -181,13 +181,13 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
         <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
         {videomodal1 && 
         <div>
-        <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+        <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs px-md">
           <PortableText value={videomodal1} components={components}/>
          </button>
          </div>}
          {videomodal2 && 
          <div>
-        <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+        <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs  px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
           Copy Link
          </button>
          </div>}
@@ -217,13 +217,13 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
               <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
               {videomodal1 && 
               <div>
-              <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full px-md">
+              <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs  px-md">
                 <PortableText value={videomodal1} components={components}/>
                </button>
                </div>}
                {videomodal2 && 
                <div>
-              <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.9px]  text-xxs rounded-full	 px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
+              <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.7px]  text-xxs  px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
                 Copy Link
                </button>
                </div>}

@@ -12,6 +12,15 @@
   src: url(HelveticaNeueLTPro-LtCn.otf);
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #00000057; /* 2 */
+}
+
 ::selection {
   background: #ededed; /* WebKit/Blink Browsers */
    color: rgb(85, 80, 80);
@@ -28,6 +37,7 @@
 
 html{
   scroll-behavior: smooth;
+  
 }
 
 body {
@@ -102,6 +112,9 @@ width: 520px;
   margin-left:auto;
   margin-right:auto;
 }
+#home{
+  padding-bottom:0;
+}
 
 .homedesc{
   margin: 0 auto;
@@ -127,8 +140,8 @@ width: 520px;
     line-height: 19px;
     font-family: Arial, sans-serif;
     letter-spacing: 0.9px;
-    border-bottom: 1px solid #00000030;
-        margin-right: 20px;
+    border-bottom: 1px solid #00000057;
+            margin-right: 20px;
     width: 310px;
     color: #000000 !important;
     border-radius: 0px !important;
@@ -136,8 +149,8 @@ width: 520px;
 
 
 .simple div {
-  color: #00000070 !important;
-  margin-bottom: 8px;
+  color: #00000070!important;
+    margin-bottom: 8px;
 }
 
 .simple input:focus{
@@ -149,7 +162,7 @@ width: 520px;
   line-height: 18px;
   font-family: Arial, sans-serif;
   letter-spacing: 0.9px;
-  border: 1px solid #00000030;
+  border: 1px solid #00000057;
   border-radius: 0px;
   padding: 0 5px;
   color: black !important;
@@ -195,6 +208,10 @@ font-weight:bold;
 } */
 
 @media (max-width: 1000px) {
+
+  #home{
+    padding-bottom:30px;
+  }
 
 
     .react-draggable{
