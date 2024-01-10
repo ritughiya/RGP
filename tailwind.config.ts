@@ -33,6 +33,7 @@ const config: Config = {
     },
     padding: {
       xs: '6px',
+      smm: '10px',
       sm: '12px',
       md: '20px',
       lg: '30px',
