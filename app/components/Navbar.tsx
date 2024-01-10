@@ -52,7 +52,7 @@ export default function Navbar(props : any) {
 
             
 
-                  <div className="reelcol pt-xl lg:pt-xxxllll pb-xl lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
+                  <div className="reelcol pt-lg lg:pt-xxxllll pb-lg lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
                     <Draggable bounds={{top: -35, bottom:300}}> 
                    <div className="z-100 cursor-move lg:block hidden">

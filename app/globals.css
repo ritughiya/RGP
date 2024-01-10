@@ -206,6 +206,10 @@ font-weight:bold;
     height:min-content;
     width: auto;
     }
+
+    .homedesc p{
+      margin-bottom: 12px !important;
+    }
     
     .footerdesc{
     height:min-content;
