@@ -52,7 +52,7 @@ export default function Navbar(props : any) {
 
             
 
-                  <div className="reelcol pt-smm lg:pt-xxxllll pb-lg lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
+                  <div className="reelcol pt-smm lg:pt-xxxlll pb-lg lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
               {props.reel && 
                     <Draggable bounds={{top: -35, bottom:300}}> 
                    <div className="z-100 cursor-move lg:block hidden">
@@ -71,7 +71,7 @@ export default function Navbar(props : any) {
 
                   </div>
 
-              <div   id="home" className="lg:pt-xxxllll lg:pb-0 pt-0 pb-xl mb-0  lg:mb-xxxllll text-opacity-80 font-sans text-smmm lg:text-smm tracking-[0.8px] w-full z-40 ">
+              <div   id="home" className="lg:pt-xxxlll lg:pb-0 pt-0 pb-xl mb-0  lg:mb-xxxllll text-opacity-80 font-sans text-smmm lg:text-smm tracking-[0.8px] w-full z-40 ">
                 <div className="flex flex-col text-left lg:text-center homedesc text-[#000000de]">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} components={components}/>}
