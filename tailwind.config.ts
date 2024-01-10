@@ -23,6 +23,7 @@ const config: Config = {
     fontSize: {
       xxs: ['10px', '23px'],
       xs: ['15px', '28px'],
+      smmm: ['13px', '23px'],
       smm: ['14px', '23px'],
       sm: ['14px', '23px'],
       md: ['16px', '23px'],
