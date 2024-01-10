@@ -62,7 +62,7 @@ const SelectedProjectItem: React.FC<SelectInfo> = ({projectTitle, projectClients
                     {projectTitle && projectTitle}
                     </Scrollchor>      
                     <div className="flex lg:hidden">                 
-                    &nbsp;&nbsp;for&nbsp;&nbsp; <PortableText value={projectClients} /></div>   
+                    &nbsp;for&nbsp; <PortableText value={projectClients} /></div>   
                        </div> }
                     {!projectLink && projectTitle}
                     </span>
