@@ -106,6 +106,7 @@ video {
 .homedesc, .footerdesc{
 height:min-content;
 width: 45vw;
+ max-width:510px;
 }
 
 .footerdesc{
@@ -221,6 +222,7 @@ color: #000000de;}
   .homedesc{
     height:min-content;
     width: auto;
+    max-width: 100%;
     }
 
     .homedesc p{
