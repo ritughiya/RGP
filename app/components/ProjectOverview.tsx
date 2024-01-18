@@ -73,7 +73,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
   <>
 
 
-<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xl lg:py-xxxlll" id={projectLink}>
+<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xl lg:py-xll" id={projectLink}>
 
 <div className="flex flex-col">
 {cloudURL && <div className="outer-container">
