@@ -67,13 +67,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 
 
-{(() => {
-    if (projectTheme == "light") {
-      return (
-  <>
-
-
-<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xl lg:py-xll" id={projectLink}>
+<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xxll lg:py-xxxl" id={projectLink}>
 
 <div className="flex flex-col">
 {cloudURL && <div className="outer-container">
@@ -139,7 +133,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                       width={0}
                       height={0}
                       sizes="100vw"
-                      style={{ top: '0', left: '0', maxHeight: '100%', width: '100%', height: '50vh', objectFit: 'contain' }} // optional
+                      style={{ top: '0', left: '0', maxHeight: '420px', width: '100%', height: '50vh', objectFit: 'contain' }} // optional
                     /> 
     </div>
 ))} 
@@ -165,112 +159,6 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                     </div>
                     </div>
                     </div>
-
-  </>
-      );
-    } else {
-      return (
-        <>
-
-
-        <div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xl lg:py-xxxlll" id={projectLink}>
-        
-        <div className="flex flex-col">
-        {cloudURL && <div className="outer-container">
-        <div className="inner-container inner-container-gif  relative ">
-        <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
-        {videomodal1 && 
-        <div>
-        <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.8px]  text-xxs px-md">
-          <PortableText value={videomodal1} components={components}/>
-         </button>
-         </div>}
-         {videomodal2 && 
-         <div>
-        <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.8px]  text-xxs  px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
-          Copy Link
-         </button>
-         </div>}
-        
-        </div>
-        
-        <video preload="none" playsInline loop autoPlay muted className="" >
-                <source src={cloudURL} type="video/mp4" />
-                <meta itemProp="name" content={projectTitle} />
-              </video>
-        
-        
-        
-        
-        </div>
-        
-        
-        
-        </div>
-        
-        
-        
-        }
-        
-        {projectImages && <div className="outer-container">
-              <div className="inner-container relative ">
-              <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
-              {videomodal1 && 
-              <div>
-              <button className="transition ease-in-out delay-100  hover:bg-opacity-80 bg-black bg-opacity-60 text-white  tracking-[0.8px]  text-xxs  px-md">
-                <PortableText value={videomodal1} components={components}/>
-               </button>
-               </div>}
-               {videomodal2 && 
-               <div>
-              <button className="transition ease-in-out delay-100  hover:bg-opacity-80  bg-black bg-opacity-60 text-white  tracking-[0.8px]  text-xxs  px-md mt-xs" onClick={() => copyToClipBoard(`${videomodal2}`)}>
-                Copy Link
-               </button>
-               </div>}
-        
-              </div>
-        
-              { projectImages.map((projectImage, index) => (
-                        <div key={index} >
-                          <Image
-                              alt="Image of project."
-                              className="proj "
-                              src={urlFor(projectImage && projectImage).url()}
-                              width={0}
-                              height={0}
-                              sizes="100vw"
-                              style={{ top: '0', left: '0', maxHeight: '100%', width: '100%', height: '50vh', objectFit: 'contain' }} // optional
-                            /> 
-            </div>
-        ))} 
-        
-              </div>
-            
-           
-        
-        </div>
-        
-        }
-        
-        
-        
-        </div>
-        
-        
-        
-                                <div className="text-left projtxt grid grid-cols-12 mt-sm">
-                            <div className="lg:col-start-5 col-start-1 col-end-12 standard-lh">
-                            {projectClients && <PortableText value={projectClients} />}
-                            {projectDescription && <PortableText value={projectDescription} />}
-                            </div>
-                            </div>
-                            </div>
-        
-          </>
-
-      );
-    }
-  })()}
 
 
 
