@@ -234,6 +234,7 @@ color: #000000de;}
     .footerdesc{
     height:min-content;
     width: auto;
+    max-width:none;
     }
   .simple input{
       width: 70%;
