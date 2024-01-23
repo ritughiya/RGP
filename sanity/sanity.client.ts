@@ -6,7 +6,7 @@ import createImageUrlBuilder from '@sanity/image-url'
 const config: ClientConfig = {
   projectId: "036bjsrb",
   dataset: "production",
-  apiVersion: "2024-01-21",
+  apiVersion: "2024-01-23",
   useCdn: false,
 };
 
