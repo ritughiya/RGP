@@ -16,7 +16,7 @@ export default function Footer(props : any) {
               Stack: HTML, CSS, Javascript, React.js, Vue, Next, Node.js, Wordpress / PHP, Netlify, Shopify and Shopify Plus
               </span>
               <span className="mb-md">
-              Previous selected clients: Printed Matter, GOAT, Cory Arcangel, Marian Goodman Gallery, Okwui Okpokwasili, Lux Magazine, VICE Magazine, New York University, Funny or Die, Gabriel Orozco, Lucky Risograph, Pioneer Works, BULLETT Magazine
+              Previous selected clients: Printed Matter, GOAT, Cory Arcangel, Marian Goodman Gallery, Okwui Okpokwasili, Tom of Finland, Lux Magazine, VICE Magazine, New York University, Funny or Die, Gabriel Orozco, Lucky Risograph, Pioneer Works, BULLETT Magazine
               </span>
               <span className="" id="capabilities" >
                 Email: Info@rgp.ltd
