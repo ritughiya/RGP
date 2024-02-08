@@ -130,6 +130,8 @@ export default {
             title: 'Project Images',
             type: 'array', 
             of: [{type: 'image'}],
+
+            
           }, 
     ]
   }
