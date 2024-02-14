@@ -258,6 +258,10 @@ color: #000000de;}
     height: auto;
 }
 
+.video-overlay{
+  display:none;
+}
+
   .reelvideo {
     box-shadow:none;
     width: 100%;
