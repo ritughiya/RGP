@@ -127,6 +127,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       { projectImages.map((projectImage, index) => (
                 <div key={index} >
                   <Image
+                                        alt="Image of project."
                       className="proj "
                       src={urlFor(projectImage && projectImage).url()}
                       width={0}
