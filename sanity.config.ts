@@ -13,7 +13,7 @@ export default defineConfig({
   projectId: '036bjsrb',
   dataset: 'production',
   basePath: "/studio",
-  apiVersion: "2024-02-08",
+  apiVersion: "2024-02-14",
 
 
   plugins: [deskTool(), visionTool(), media(), cloudinarySchemaPlugin()],
