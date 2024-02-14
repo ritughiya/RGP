@@ -25,6 +25,7 @@ export async function getProject() {
         projectType,
         projectVideo,
         "cloudURL": projectVideofile.secure_url,
+        "gifURL" : projectGiffile.secure_url,
         "projectVideoURL": projectVideofile.asset->url,
         projectVideoposter,
         videoID,

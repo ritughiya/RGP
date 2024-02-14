@@ -84,6 +84,11 @@ export default {
             name: 'projectVideofile',
             type: 'cloudinary.asset'
           },
+          {
+            title: 'GIF File',
+            name: 'projectGiffile',
+            type: 'cloudinary.asset'
+          },
 
           {
             title: 'Video Modal 1',

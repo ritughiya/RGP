@@ -32,6 +32,7 @@ export interface ProjectInfo {
     videoID: string,
     projectVideoURL: string,
     cloudURL: string,
+    gifURL: string,
     videomodal1: PortableTextBlock[],
     videomodal2: string,
     projectImages: Array<ImageProps>,

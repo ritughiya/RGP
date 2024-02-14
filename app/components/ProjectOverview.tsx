@@ -27,6 +27,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                                     videoID = {item.videoID}
                                     projectVideoURL={item.projectVideoURL}
                                     cloudURL={item.cloudURL}
+                                    gifURL={item.gifURL}
                                     videomodal1={item.videomodal1}
                                     videomodal2={item.videomodal2}
                                     projectImages={item.projectImages}
@@ -36,7 +37,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                 </>
 }
 
-const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectDescription, projectVideoposter, projectVideoURL, cloudURL, videoID, projectImages, projectTheme, videomodal1, videomodal2  }) => {
+const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectDescription, projectVideoposter, projectVideoURL, cloudURL, gifURL, videoID, projectImages, projectTheme, videomodal1, videomodal2  }) => {
 
   const [copySuccess, setCopySuccess] = useState('');
   
@@ -88,12 +89,16 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 </div>
 
-<video preload="none" playsInline loop autoPlay muted className="" >
+<video preload="none" playsInline loop autoPlay muted className="hidden lg:block" >
         <source src={cloudURL} type="video/mp4" />
         <meta itemProp="name" content={projectTitle} />
       </video>
 
-
+      {gifURL && 
+                   <div className="z-100 lg:hidden block">
+                        <img alt={projectTitle} src={gifURL} />
+                </div>     
+                  }
 
 
 </div>
@@ -127,7 +132,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
       { projectImages.map((projectImage, index) => (
                 <div key={index} >
                   <Image
-                                        alt="Image of project."
+                      alt={projectTitle}
                       className="proj "
                       src={urlFor(projectImage && projectImage).url()}
                       width={0}
