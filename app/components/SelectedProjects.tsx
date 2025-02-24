@@ -52,7 +52,7 @@ const SelectedProjectItem: React.FC<SelectInfo> = ({projectTitle, projectClients
                     <span className="col-start-1 col-end-5 hidden lg:block">
                         {projectClients && <PortableText value={projectClients} />}
                     </span>
-                    <span className="col-start-1 lg:col-start-5 col-end-12 lg:col-end-10">
+                    <span className="col-start-1 lg:col-start-5 col-end-11 lg:col-end-10">
                         
                     { projectLink && 
                     <div className="flex">
@@ -69,7 +69,7 @@ const SelectedProjectItem: React.FC<SelectInfo> = ({projectTitle, projectClients
                     <span className=" col-start-10 col-end-10 hidden lg:block lg:col-start-10 lg:col-end-10 ">
                     {projectType && <PortableText value={projectType} />}
                     </span>
-                    <span className="lg:text-left text-right col-start-12 col-end-12 lg:col-start-11 lg:col-end-11 text-[#00000070]  ">
+                    <span className="lg:text-left text-right col-start-11 col-end-13 lg:col-start-11 lg:col-end-11 text-[#00000070]  ">
                     {projectYear && <PortableText value={projectYear} />}
                     </span>
                     <span className="lg:col-start-12 lg:col-end-12 col-start-12 col-end-12 text-[#00000070] hidden lg:block">

@@ -47,11 +47,11 @@ export default async function Home() {
             <div key={data._id} className="lg:px-sm px-md font-sans text-opacity-80 tracking-[0.8px] text-smmm lg:text-smm border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} mobileDesc={data.mobileDesc} reel={data.homeReelURL} reelgif={data.homeReelGifURL} reelposter={data.homeReelposter} />
               
-                <div className="lg:border-t lg:border-b mb-xxll lg:mb-md ">
+                <div className="lg:border-t lg:border-b mb-xxll lg:mb-xs ">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>
-              <div className="mt-none lg:mt-xxl lg:border-b pb-xl lg:pb-none lg:border-none">
+              <div className="mt-none lg:mt-none lg:border-b pb-xl lg:pb-none lg:border-none">
               <ProjectOverview projectinfos={data.featprojects}/>
               </div>
 
