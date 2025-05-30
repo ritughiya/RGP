@@ -68,9 +68,9 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 
 
-<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xxll lg:py-xxl" id={projectLink}>
+<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xxll lg:py-xxxl" id={projectLink}>
 
-<div className="flex flex-col">
+<div className="flex flex-col"> 
 {cloudURL && <div className="outer-container">
 <div className="inner-container inner-container-gif  relative ">
 <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
@@ -138,7 +138,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                       width={0}
                       height={0}
                       sizes="100vw"
-                      style={{ top: '0', left: '0', maxHeight: '600px', width: '100%', height: '60vh', objectFit: 'contain' }} // optional
+                      style={{ top: '0', left: '0', maxHeight: '800px', width: '100%', height: '75vh', objectFit: 'contain' }} // optional
                     /> 
     </div>
 ))} 

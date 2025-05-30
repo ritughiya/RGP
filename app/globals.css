@@ -66,9 +66,9 @@ span.cold {
 
 .outer-container {
     width: auto;
-    height: 60vh;
+    height: 75vh;
     text-align: center;
-    max-height:600px;
+    max-height:800px;
   }
 .inner-container {
     display: inline-block;
@@ -81,7 +81,7 @@ span.cold {
 }
 video {
     width: auto;
-    height: 60vh;
+    height: 75vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -94,7 +94,7 @@ video {
 
 .inner-container video{
   background-color: #ededed !important;
-  max-height:600px;
+  max-height:800px;
 }
 
 .reelcol{
