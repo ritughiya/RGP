@@ -111,7 +111,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 }
 
-{projectImages && <div className="outer-container">
+{projectImages && <div className="img-outer-container outer-container">
       <div className="inner-container relative ">
       <div className="transition ease-in-out delay-100  video-overlay absolute z-20 flex flex-col justify-center w-full h-full opacity-0 hover:opacity-100">
       {videomodal1 && 

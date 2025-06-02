@@ -237,11 +237,16 @@ color: #000000de;}
     max-width:none;
     }
   .simple input{
-      width: 70%;
+      width: 80%;
   }
 
   img{
     height:auto !important;
+  }
+
+  .img-outer-container{
+    width: 85% !important;
+    margin:auto !important;
   }
 
   .outer-container{
