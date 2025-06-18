@@ -96,6 +96,7 @@ video {
 .inner-container video{
   background-color: #ededed !important;
   max-height:800px;
+  width:80vw;
 }
 
 .reelcol{
