@@ -65,8 +65,9 @@ span.cold {
 }
 
 .outer-container {
-    width: auto;
-    height: 75vh;
+    width: 80vw;
+    height: auto;
+    margin:auto;
     text-align: center;
     max-height:800px;
   }
@@ -81,7 +82,7 @@ span.cold {
 }
 video {
     width: auto;
-    height: 75vh;
+    height: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
