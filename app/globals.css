@@ -243,6 +243,7 @@ color: #000000de;}
 
   img{
     height:auto !important;
+    width:100vw !important;
   }
 
   .img-outer-container{
