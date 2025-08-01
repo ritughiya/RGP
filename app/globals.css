@@ -256,6 +256,12 @@ color: #000000de;}
     margin:auto !important;
   }
 
+
+img.proj{
+  height: min-content !important;
+  max-height: 400px !important;
+}
+
   .outer-container{
     height:auto;
     width:100%;
