@@ -141,6 +141,7 @@ width: 45vw;
 
 img.proj{
   height: min-content !important;
+  max-height: 600px !important;
 }
 
 .simple input{
