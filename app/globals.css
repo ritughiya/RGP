@@ -83,7 +83,7 @@ span.cold {
 video {
     width: auto;
     height: auto;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
 }
 
 .reelvideo{
@@ -94,8 +94,9 @@ video {
 }
 
 .inner-container video{
-  background-color: #ededed !important;
+  /* background-color: #ededed !important; */
   width:80vw;
+  max-height:600px;
 }
 
 .reelcol{
