@@ -97,7 +97,7 @@ video {
   background-color: #ededed !important;
   width:auto;
   max-height:600px;
-  height:80vh;
+  height:auto;
 }
 
 .reelcol{
