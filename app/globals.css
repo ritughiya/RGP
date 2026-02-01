@@ -65,7 +65,7 @@ span.cold {
 }
 
 .outer-container {
-    width: 80vw;
+    width: 70vw;
     height: auto;
     margin:auto;
     text-align: center;
@@ -91,12 +91,13 @@ video {
   height: 200px;
   object-fit:cover;
   background-color: #ededed;
+  display:none;
 }
 
 .inner-container video{
   background-color: #ededed !important;
   width:auto;
-  max-height:600px;
+  /* max-height:500px; */
   height:auto;
 }
 
@@ -288,6 +289,7 @@ img.proj{
     /* height: 60vh; */
     object-fit: cover;
     height: auto;
+    display:block;
     
 
 }

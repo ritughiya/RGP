@@ -41,19 +41,19 @@ export default function Navbar(props : any) {
       <div className="grid grid-cols-12 px-sm">
               <span className="col-start-1	col-end-3	">
               <Scrollchor className="cursor-pointer bolder text-[#000000de]"  to="#home">{props.title}</Scrollchor></span>
-               <span className="col-start-5 col-end-6 hidden lg:inline-block ">
+               {/* <span className="col-start-5 col-end-6 hidden lg:inline-block ">
               <Scrollchor className="cursor-pointer bolder text-[#00000070]" to="#full">Index</Scrollchor>
                 </span> 
                 <span className="col-start-12 col-end-12 hidden lg:inline-block ">
               <Scrollchor className="cursor-pointer bolder text-[#00000070]" to="#capabilities">Capabilities</Scrollchor>
-                </span>
+                </span> */}
               </div>
               </div>
 
             
 
-                  <div className="reelcol pt-smm lg:pt-xxl pb-lg lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
-               {props.reel && 
+                  <div className="reelcol lg:pt-xxl pb-md lg:pb-none right-0 pr-0 lg:pr-xs lg:absolute">
+               {/* {props.reel && 
                     <Draggable bounds={{top: -35, bottom:120}}> 
                    <div className="z-100 cursor-move lg:block hidden">
                          <video  playsInline loop autoPlay muted className="reelvideo" poster={urlFor(props.reelposter && props.reelposter).url()}>
@@ -67,7 +67,7 @@ export default function Navbar(props : any) {
                    <div className="z-100 lg:hidden block">
                         <img src={props.reelgif} />
                 </div>     
-                  }
+                  } */}
 
                   </div>
 
