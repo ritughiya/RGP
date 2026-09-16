@@ -3,7 +3,6 @@
 
 import React, { useState } from 'react';
 import { getProject } from "@/sanity/sanity.query";
-import { getProfile } from "@/sanity/sanity.query";
 import type { ProjectType } from "@/types";
 import type { ProfileType } from "@/types";
 import { PortableText } from "@portabletext/react";
@@ -14,17 +13,18 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Link from 'next/link';
 import Script from 'next/script';
+import SiteMotion from './components/SiteMotion';
 
 
 export const revalidate = 60;
 
 export default async function Home() {
   const project: ProjectType[] = await getProject();
-  const profile: ProfileType[] = await getProfile();
 
 
   return (
     <>
+        <SiteMotion />
         <Script id="analytics1"
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=G-4QLMD7K8DH`}
@@ -47,7 +47,7 @@ export default async function Home() {
             <div key={data._id} className="lg:px-sm px-md font-sans text-opacity-80 tracking-[0.8px] text-smmm lg:text-smm border-opacity-30	">
               <Navbar title={data.homeTitle} desc={data.homeDesc} mobileDesc={data.mobileDesc} reel={data.homeReelURL} reelgif={data.homeReelGifURL} reelposter={data.homeReelposter} />
               
-                <div className="lg:border-t lg:border-b mb-sm lg:mb-xs ">
+                <div className="portfolio-index-enter lg:border-t lg:border-b mb-sm lg:mb-xs ">
 
               <SelectedProjects projectinfos={data.selectedProjects}/>
               </div>
@@ -56,12 +56,12 @@ export default async function Home() {
               </div>
 
 
-              <div id="full" className="lg:border-b pt-xxl mb-lg pb-xs hidden lg:block">
+              <div data-reveal id="full" className="lg:border-b pt-xxl mb-lg pb-xs hidden lg:block">
                 <div className="lg:border-t">
               <ProjectIndex projectinfos={data.indexProjects}/>
               </div>
               </div> 
-              <div className="lg:block lg:pb-sm">
+              <div data-reveal className="lg:block lg:pb-sm">
               <div className="lg:border-b mb-md">
               <Footer />
               </div>

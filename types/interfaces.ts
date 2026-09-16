@@ -32,9 +32,11 @@ export interface ProjectInfo {
     videoID: string,
     projectVideoURL: string,
     cloudURL: string,
+    videoWidth?: number,
+    videoHeight?: number,
     gifURL: string,
     videomodal1: PortableTextBlock[],
     videomodal2: string,
-    projectImages: Array<ImageProps>,
+    projectImages: Array<ImageProps & { dimensions?: { width: number; height: number } }>,
     projectTheme: string,
 }

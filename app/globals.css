@@ -95,7 +95,7 @@ video {
 }
 
 .inner-container video{
-  background-color: #ededed !important;
+  background-color: transparent;
   width:auto;
   /* max-height:500px; */
   height:auto;
@@ -303,4 +303,79 @@ img.proj{
 .reelcol{
   width: 100%;
 }
+}
+/* Reserve media geometry before any download or hydration. */
+.inner-container-gif {
+  display: block;
+  width: 100%;
+}
+.project-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.inner-container .project-media-poster,
+.inner-container .project-media-video {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  box-shadow: none;
+}
+.project-media-video {
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+.project-media-video.is-playing {
+  opacity: 1;
+}
+.project-media-play {
+  position: absolute;
+  z-index: 30;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  color: white;
+  background: rgba(0, 0, 0, .7);
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .project-media-video { transition: none; }
+}
+
+/* One quiet entrance; animate paint/compositing only, never layout. */
+@keyframes portfolio-enter {
+  from { opacity: 0; transform: translate3d(0, 12px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+@keyframes portfolio-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .portfolio-nav-enter {
+    animation: portfolio-fade 450ms ease-out both;
+  }
+  .portfolio-intro-enter {
+    animation: portfolio-enter 650ms cubic-bezier(.22, 1, .36, 1) both;
+  }
+  .portfolio-index-enter {
+    animation: portfolio-enter 650ms cubic-bezier(.22, 1, .36, 1) 90ms both;
+  }
+  .portfolio-project-enter {
+    animation: portfolio-enter 650ms cubic-bezier(.22, 1, .36, 1) 140ms both;
+  }
+  .portfolio-reveal {
+    animation: portfolio-enter 650ms cubic-bezier(.22, 1, .36, 1) both;
+  }
+}
+/* Keyboard navigation must never leave a focused control faded out. */
+.portfolio-intro-enter:focus-within,
+.portfolio-index-enter:focus-within,
+.portfolio-reveal:focus-within,
+.portfolio-project-enter:focus-within {
+  animation: none;
 }

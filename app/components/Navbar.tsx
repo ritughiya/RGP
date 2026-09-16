@@ -37,7 +37,7 @@ export default function Navbar(props : any) {
 
   return (
 <>
-     <div className="hidden lg:block fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.8px] w-full " id="#content">
+     <div className="portfolio-nav-enter hidden lg:block fixed bg-white pt-xs pb-xs top-0 z-50 left-0 text-opacity-80 font-sans text-smm tracking-[0.8px] w-full " id="#content">
       <div className="grid grid-cols-12 px-sm">
               <span className="col-start-1	col-end-3	">
               <Scrollchor className="cursor-pointer bolder text-[#000000de]"  to="#home">{props.title}</Scrollchor></span>
@@ -72,7 +72,7 @@ export default function Navbar(props : any) {
                   </div>
 
               <div   id="home" className="lg:pt-xxl lg:pb-0 pt-0 pb-md mb-0  lg:mb-xxl text-opacity-80 font-sans text-smmm lg:text-smm tracking-[0.8px] w-full z-40 ">
-                <div className="flex flex-col text-left lg:text-center homedesc text-[#000000de]">
+                <div className="portfolio-intro-enter flex flex-col text-left lg:text-center homedesc text-[#000000de]">
                   <div className="lg:block hidden">
                 {props.desc && <PortableText value={props.desc} components={components}/>}
                 

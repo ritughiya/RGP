@@ -1,5 +1,7 @@
 'use client';
 
+import ProjectVideo from "./ProjectVideo";
+
 import React, { useState } from 'react';
 import { ProjectInfo } from "@/types/interfaces";
 import { PortableText } from "@portabletext/react";
@@ -27,6 +29,9 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                                     videoID = {item.videoID}
                                     projectVideoURL={item.projectVideoURL}
                                     cloudURL={item.cloudURL}
+                                    videoWidth={item.videoWidth}
+                                    videoHeight={item.videoHeight}
+                                    priority={index === 0}
                                     gifURL={item.gifURL}
                                     videomodal1={item.videomodal1}
                                     videomodal2={item.videomodal2}
@@ -37,7 +42,7 @@ export const ProjectOverview: React.FC<ProjectProps> = ({projectinfos}: ProjectP
                 </>
 }
 
-const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, projectClients, projectDescription, projectVideoposter, projectVideoURL, cloudURL, gifURL, videoID, projectImages, projectTheme, videomodal1, videomodal2  }) => {
+const ProjectItem: React.FC<ProjectInfo & { priority?: boolean }> = ({ priority, videoWidth, videoHeight, projectTitle, projectLink, projectClients, projectDescription, projectVideoposter, projectVideoURL, cloudURL, gifURL, videoID, projectImages, projectTheme, videomodal1, videomodal2  }) => {
 
   const [copySuccess, setCopySuccess] = useState('');
   
@@ -68,7 +73,7 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 
 
-<div className="text-smmm lg:text-smm  text-[#000000de] Project-Info py-xxll lg:py-xxxl" id={projectLink}>
+<div data-reveal={priority ? undefined : true} className={`${priority ? "portfolio-project-enter " : ""}text-smmm lg:text-smm text-[#000000de] Project-Info py-xxll lg:py-xxxl`} id={projectLink}>
 
 <div className="flex flex-col"> 
 {cloudURL && <div className="outer-container">
@@ -89,16 +94,14 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
 
 </div>
 
-<video preload="none" playsInline loop autoPlay muted className="hidden lg:block" >
-        <source src={cloudURL} type="video/mp4" />
-        <meta itemProp="name" content={projectTitle} />
-      </video>
-
-      {gifURL && 
-                   <div className="z-100 lg:hidden block">
-                        <img alt={projectTitle} src={gifURL} />
-                </div>     
-                  }
+<ProjectVideo
+        src={cloudURL}
+        poster={projectVideoposter ? urlFor(projectVideoposter).width(1400).auto('format').url() : undefined}
+        title={projectTitle}
+        width={videoWidth}
+        height={videoHeight}
+        priority={priority}
+      />
 
 
 </div>
@@ -135,10 +138,10 @@ const ProjectItem: React.FC<ProjectInfo> = ({ projectTitle, projectLink, project
                       alt={projectTitle}
                       className="proj "
                       src={urlFor(projectImage && projectImage).url()}
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      style={{ top: '0', left: '0', maxHeight: '800px', width: '100%', height: '75vh', objectFit: 'contain' }} // optional
+                      width={projectImage.dimensions?.width || 1200}
+                      height={projectImage.dimensions?.height || 800}
+                      sizes="(max-width: 1000px) 85vw, 70vw"
+                      style={{ top: '0', left: '0', maxHeight: '800px', width: '100%', height: 'auto', objectFit: 'contain' }} // optional
                     /> 
     </div>
 ))} 
