@@ -332,15 +332,6 @@ img.proj{
 .project-media-video.is-playing {
   opacity: 1;
 }
-.project-media-play {
-  position: absolute;
-  z-index: 30;
-  bottom: 12px;
-  right: 12px;
-  padding: 6px 12px;
-  color: white;
-  background: rgba(0, 0, 0, .7);
-}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .project-media-video { transition: none; }

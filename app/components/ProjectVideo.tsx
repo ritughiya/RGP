@@ -19,7 +19,6 @@ export default function ProjectVideo({ src, poster, title, width, height, priori
   const [active, setActive] = useState(false);
   const [requested, setRequested] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [blocked, setBlocked] = useState(false);
   const [failed, setFailed] = useState(false);
   const frameWidth = width && width > 0 ? width : 16;
   const frameHeight = height && height > 0 ? height : 9;
@@ -28,39 +27,26 @@ export default function ProjectVideo({ src, poster, title, width, height, priori
     : undefined);
 
   useEffect(() => {
-    const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    let nearby = false;
-    const update = () => {
-      const shouldPlay = nearby && !motion.matches;
-      if (shouldPlay) setRequested(true);
-      setActive(shouldPlay);
-    };
     const observer = new IntersectionObserver(([entry]) => {
-      nearby = entry.isIntersecting;
-      update();
+      if (entry.isIntersecting) setRequested(true);
+      setActive(entry.isIntersecting);
     }, { rootMargin: '300px' });
     if (frame.current) observer.observe(frame.current);
-    motion.addEventListener('change', update);
     return () => {
       observer.disconnect();
-      motion.removeEventListener('change', update);
     };
   }, []);
 
   useEffect(() => {
     const element = video.current;
     if (!element) return;
-    let cancelled = false;
     if (active && !failed) {
-      element.play().then(() => {
-        if (!cancelled) setBlocked(false);
-      }).catch(() => {
-        if (!cancelled) setBlocked(true);
-      });
+      // Explicitly set the property before play for mobile WebKit as well.
+      element.muted = true;
+      element.play().catch(() => { /* Keep the poster if the browser blocks playback. */ });
     } else {
       element.pause();
     }
-    return () => { cancelled = true; };
   }, [active, failed]);
 
   useEffect(() => {
@@ -96,15 +82,11 @@ export default function ProjectVideo({ src, poster, title, width, height, priori
       <video ref={video} src={requested && !failed ? src : undefined}
         className={`project-media-video${playing ? ' is-playing' : ''}`}
         width={frameWidth} height={frameHeight} poster={still}
-        preload={active ? 'auto' : 'none'} playsInline loop muted
+        preload={active ? 'auto' : 'none'} playsInline loop muted autoPlay
         aria-hidden="true"
         onPlaying={revealFrame}
         onError={() => { setFailed(true); setPlaying(false); }} />
-      {blocked && !failed && (
-        <button className="project-media-play" onClick={() => {
-          video.current?.play().then(() => setBlocked(false)).catch(() => setBlocked(true));
-        }}>Play video</button>
-      )}
+
     </div>
   );
 }

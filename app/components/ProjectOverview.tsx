@@ -94,6 +94,7 @@ const ProjectItem: React.FC<ProjectInfo & { priority?: boolean }> = ({ priority,
 
 </div>
 
+<div className={gifURL ? "hidden lg:block" : ""}>
 <ProjectVideo
         src={cloudURL}
         poster={projectVideoposter ? urlFor(projectVideoposter).width(1400).auto('format').url() : undefined}
@@ -102,6 +103,19 @@ const ProjectItem: React.FC<ProjectInfo & { priority?: boolean }> = ({ priority,
         height={videoHeight}
         priority={priority}
       />
+</div>
+{gifURL && (
+  <div className="lg:hidden">
+    <div className="project-media" style={{ aspectRatio: `${videoWidth || 16} / ${videoHeight || 9}` }}>
+      {/* Animated images preserve the original mobile behavior without autoplay restrictions. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="project-media-poster" src={gifURL} alt={projectTitle}
+        width={videoWidth || 16} height={videoHeight || 9}
+        loading={priority ? 'eager' : 'lazy'} decoding="async" />
+    </div>
+  </div>
+)}
+
 
 
 </div>
